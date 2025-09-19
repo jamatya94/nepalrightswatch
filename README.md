@@ -16,14 +16,13 @@ A tribute website honoring the brave students and youth who participated in the 
 - **Mobile**: Single column layout with hamburger menu
 
 ### 🔍 Interactive Features
-- **Search functionality** to find specific martyrs by name, location, or details
 - **Animated statistics** showing martyrs count, injured, and arrested numbers
 - **Smooth scrolling navigation** between sections
 - **Contact form** for visitors to share information or get in touch
 
 ### 🖼️ Image Gallery
 - **26 individual martyr profiles** with photos and biographical information
-- **Fallback images** for missing photos
+- **S3 cloud storage** for reliable image hosting and fast global delivery
 - **Lazy loading** for optimal performance
 - **Error handling** for broken image links
 
@@ -35,16 +34,16 @@ nepal/
 ├── styles.css          # CSS styles and responsive design
 ├── script.js           # JavaScript functionality
 ├── README.md           # Project documentation
-├── Posters/            # Individual martyr photos
+├── Posters/            # Local backup of martyr photos (images served from S3)
 │   ├── Abhishek_Chaulagain.png
 │   ├── Abhishek.png
 │   ├── Arjun.png
 │   └── ... (26 total images)
-├── Stencils/           # Additional artwork and stencils
+├── Stencils/           # Local backup of artwork and stencils (images served from S3)
 │   ├── Abhishek Shrestha/
 │   ├── Ayush Thapa/
 │   └── ... (individual folders)
-└── Sketches/           # Design sketches and concepts
+└── Sketches/           # Local backup of design sketches (images served from S3)
 ```
 
 ## Martyrs Honored
@@ -106,17 +105,18 @@ The website memorializes 26 brave individuals who participated in the September 
 
 ## Performance Optimizations
 
+- **AWS S3 cloud storage** for fast, reliable image delivery worldwide
+- **HTTPS image URLs** for secure content delivery
 - **Lazy loading** for images
-- **Debounced search** to reduce API calls
 - **CSS animations** instead of JavaScript where possible
-- **Optimized images** with fallback handling
+- **Optimized images** with error handling
 - **Minimal external dependencies**
 
 ## Getting Started
 
 1. **Clone or download** the project files
 2. **Open `index.html`** in a web browser
-3. **Ensure all image files** are in the correct directories
+3. **Images are hosted on AWS S3** - no local image setup required
 4. **Customize content** as needed for your specific use case
 
 ## Customization
@@ -134,9 +134,9 @@ The website uses Nepal flag colors defined in CSS custom properties:
 - Add or remove sections as needed
 
 ### Images
-- Replace images in the `Posters/` directory
-- Ensure consistent naming convention
-- Add fallback images for missing photos
+- All images are served from AWS S3 bucket (nepalgenz.s3.us-east-1.amazonaws.com)
+- Local image folders serve as backup/reference
+- S3 URLs are configured in `script.js` data arrays
 
 ## Contributing
 
