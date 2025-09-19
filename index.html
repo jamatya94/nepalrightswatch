@@ -296,12 +296,85 @@
         </div>
     </section>
 
-    <!-- Breaking News Section -->
-    <section id="breaking-news" class="breaking-news-section">
+    <!-- International Media Coverage Section -->
+    <section class="international-coverage">
         <div class="container">
-            <h2 class="section-title">Breaking News & Latest Updates</h2>
-            <p class="section-description">Current developments, government responses, and international coverage</p>
+            <h2 class="section-title">International Media Coverage</h2>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <blockquote>"The courage of Nepal's youth in standing up against corruption is inspiring. Their sacrifice will not be forgotten."</blockquote>
+                    <cite>- BBC World Service</cite>
+                </div>
+                <div class="quote-card">
+                    <blockquote>"Nepal's Generation Z has shown the world how young people can drive meaningful change through peaceful resistance."</blockquote>
+                    <cite>- CNN International</cite>
+                </div>
+                <div class="quote-card">
+                    <blockquote>"The violent suppression of peaceful student protests in Nepal represents a grave violation of human rights."</blockquote>
+                    <cite>- Al Jazeera</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Martyrs Section -->
+    <section id="martyrs" class="martyrs">
+        <div class="container">
+            <h2 class="section-title">Our Martyrs</h2>
             
+            <div class="martyrs-grid" id="martyrs-grid">
+                <!-- Martyrs will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Memorial Quote -->
+    <section class="memorial-quote">
+        <div class="container">
+            <blockquote class="quote">
+                "They gave their today for our tomorrow. Their sacrifice will never be forgotten, and their dreams of a just and democratic Nepal will live on through us."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Sketches Gallery Section -->
+    <section id="sketches" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Artistic Sketches</h2>
+            <p class="section-subtitle">Hand-drawn sketches and artistic designs honoring our martyrs</p>
+            <div id="sketches-grid" class="gallery-grid">
+                <!-- Sketches will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stencils Gallery Section -->
+    <section id="stencils" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Stencil Artwork</h2>
+            <p class="section-subtitle">Stencil designs and artwork created in memory of our fallen heroes</p>
+            <div id="stencils-grid" class="gallery-grid">
+                <!-- Stencils will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Updates Section -->
+    <section id="social-feed" class="social-feed-section">
+        <div class="container">
+            <h2 class="section-title">Latest Updates</h2>
+            <p class="section-description">Current developments, government responses, international coverage, and real-time posts about Nepal protests and youth movements</p>
+            
+            <div class="hashtag-filters">
+                <button class="hashtag-btn active" data-hashtag="all">All Updates</button>
+                <button class="hashtag-btn" data-hashtag="breaking">Breaking News</button>
+                <button class="hashtag-btn" data-hashtag="international">International Coverage</button>
+                <button class="hashtag-btn" data-hashtag="social">Social Media</button>
+                <button class="hashtag-btn" data-hashtag="analysis">Analysis & Opinion</button>
+                <button class="hashtag-btn" data-hashtag="government">Government Response</button>
+            </div>
+            
+            <!-- Breaking News Grid -->
             <div class="news-grid">
                 <div class="news-card urgent">
                     <div class="news-header">
@@ -381,83 +454,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="international-quotes">
-                <h3>International Media Coverage</h3>
-                <div class="quote-grid">
-                    <div class="quote-card">
-                        <blockquote>"The courage of Nepal's youth in standing up against corruption is inspiring. Their sacrifice will not be forgotten."</blockquote>
-                        <cite>- BBC World Service</cite>
-                    </div>
-                    <div class="quote-card">
-                        <blockquote>"Nepal's Generation Z has shown the world how young people can drive meaningful change through peaceful resistance."</blockquote>
-                        <cite>- CNN International</cite>
-                    </div>
-                    <div class="quote-card">
-                        <blockquote>"The violent suppression of peaceful student protests in Nepal represents a grave violation of human rights."</blockquote>
-                        <cite>- Al Jazeera</cite>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Martyrs Section -->
-    <section id="martyrs" class="martyrs">
-        <div class="container">
-            <h2 class="section-title">Our Martyrs</h2>
-            
-            <div class="martyrs-grid" id="martyrs-grid">
-                <!-- Martyrs will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Memorial Quote -->
-    <section class="memorial-quote">
-        <div class="container">
-            <blockquote class="quote">
-                "They gave their today for our tomorrow. Their sacrifice will never be forgotten, and their dreams of a just and democratic Nepal will live on through us."
-            </blockquote>
-        </div>
-    </section>
-
-    <!-- Sketches Gallery Section -->
-    <section id="sketches" class="gallery-section">
-        <div class="container">
-            <h2 class="section-title">Artistic Sketches</h2>
-            <p class="section-subtitle">Hand-drawn sketches and artistic designs honoring our martyrs</p>
-            <div id="sketches-grid" class="gallery-grid">
-                <!-- Sketches will be loaded dynamically -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Stencils Gallery Section -->
-    <section id="stencils" class="gallery-section">
-        <div class="container">
-            <h2 class="section-title">Stencil Artwork</h2>
-            <p class="section-subtitle">Stencil designs and artwork created in memory of our fallen heroes</p>
-            <div id="stencils-grid" class="gallery-grid">
-                <!-- Stencils will be loaded dynamically -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Media Feed Section -->
-            <!-- Social Media Feed Section -->
-        <div class="social-feed-section">
-            <h2 class="section-title">Latest Updates</h2>
-            <p class="section-description">Real-time posts and international news coverage about Nepal protests and youth movements</p>
-            
-            <div class="hashtag-filters">
-                <button class="hashtag-btn active" data-hashtag="all">All Updates</button>
-                <button class="hashtag-btn" data-hashtag="breaking">Breaking News</button>
-                <button class="hashtag-btn" data-hashtag="international">International Coverage</button>
-                <button class="hashtag-btn" data-hashtag="social">Social Media</button>
-                <button class="hashtag-btn" data-hashtag="analysis">Analysis & Opinion</button>
-                <button class="hashtag-btn" data-hashtag="government">Government Response</button>
-            </div>
             
             <div class="loading-indicator" id="social-loading">
                 <div class="loading-spinner"></div>
@@ -470,6 +466,7 @@
             
             <button class="load-more-btn" id="load-more-posts">Load More Posts</button>
         </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
