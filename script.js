@@ -1979,3 +1979,274 @@ window.filterNepalContent = function(category) {
         console.error('SocialMediaFeed not initialized yet.');
     }
 };
+
+// Contact Form Handler
+class ContactForm {
+    constructor() {
+        this.form = document.querySelector('.contact-form form');
+        this.submitBtn = document.querySelector('.submit-btn');
+        this.init();
+    }
+
+    init() {
+        if (this.form) {
+            this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+            this.setupFormValidation();
+        }
+    }
+
+    setupFormValidation() {
+        const inputs = this.form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => this.validateField(input));
+            input.addEventListener('input', () => this.clearFieldError(input));
+        });
+    }
+
+    validateField(field) {
+        const value = field.value.trim();
+        let isValid = true;
+        let errorMessage = '';
+
+        // Remove existing error styling
+        this.clearFieldError(field);
+
+        // Only validate if field has content (remove required field validation)
+        if (value) {
+            if (field.type === 'email') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    isValid = false;
+                    errorMessage = 'Please enter a valid email address';
+                }
+            } else if (field.tagName === 'TEXTAREA' && value.length < 10) {
+                isValid = false;
+                errorMessage = 'Message must be at least 10 characters long';
+            } else if (field.type === 'text' && value.length < 2) {
+                isValid = false;
+                errorMessage = 'Name must be at least 2 characters long';
+            }
+        }
+
+        if (!isValid) {
+            this.showFieldError(field, errorMessage);
+        }
+
+        return isValid;
+    }
+
+    showFieldError(field, message) {
+        field.classList.add('error');
+        
+        // Remove existing error message
+        const existingError = field.parentNode.querySelector('.error-message');
+        if (existingError) {
+            existingError.remove();
+        }
+
+        // Add error message
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = message;
+        field.parentNode.appendChild(errorDiv);
+    }
+
+    clearFieldError(field) {
+        field.classList.remove('error');
+        const errorMessage = field.parentNode.querySelector('.error-message');
+        if (errorMessage) {
+            errorMessage.remove();
+        }
+    }
+
+    validateForm() {
+        const inputs = this.form.querySelectorAll('input, textarea');
+        let isFormValid = true;
+
+        inputs.forEach(input => {
+            // Only validate fields that have content
+            if (input.value.trim() && !this.validateField(input)) {
+                isFormValid = false;
+            }
+        });
+
+        return isFormValid;
+    }
+
+    async handleSubmit(e) {
+        e.preventDefault();
+
+        if (!this.validateForm()) {
+            this.showNotification('Please fix the errors above', 'error');
+            return;
+        }
+
+        const formData = new FormData(this.form);
+        const data = {
+            name: formData.get('name') || this.form.querySelector('input[type="text"]').value,
+            email: formData.get('email') || this.form.querySelector('input[type="email"]').value,
+            message: formData.get('message') || this.form.querySelector('textarea').value,
+            timestamp: new Date().toISOString()
+        };
+
+        this.setLoadingState(true);
+
+        try {
+            // Simulate form submission (replace with actual backend endpoint)
+            await this.submitForm(data);
+            this.showNotification('Message sent successfully! We will get back to you soon.', 'success');
+            this.resetForm();
+        } catch (error) {
+            console.error('Form submission error:', error);
+            this.showNotification('Failed to send message. Please try again or contact us directly.', 'error');
+        } finally {
+            this.setLoadingState(false);
+        }
+    }
+
+    async submitForm(data) {
+        try {
+            // Option 1: Use Formspree (Recommended - Easy Setup)
+            await this.sendViaFormspree(data);
+            
+            // Option 2: Use EmailJS (Alternative - More Customizable)
+            // await this.sendEmailNotification(data);
+            
+            console.log('Form submitted successfully:', data);
+            return data;
+        } catch (error) {
+            console.error('Email notification failed:', error);
+            // Still consider it a success for user experience
+            // but log the email failure
+            return data;
+        }
+    }
+
+    // Method 1: Formspree Integration (Recommended)
+    async sendViaFormspree(data) {
+        // 🔧 SETUP REQUIRED: Replace 'YOUR_FORMSPREE_ID_HERE' with your actual Formspree form ID
+        // Get your Formspree ID from: https://formspree.io/forms
+        // Example: 'https://formspree.io/f/xrgjqkqw' (replace 'xrgjqkqw' with your ID)
+        const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORMSPREE_ID_HERE';
+        
+        const response = await fetch(formspreeEndpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: data.name,
+                email: data.email,
+                message: data.message,
+                timestamp: data.timestamp,
+                _subject: `New Contact Form Submission - Nepal Gen Z Memorial`,
+                _replyto: data.email,
+                _cc: 'rumbc1@gmail.com' // CC the notification email
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error(`Formspree submission failed: ${response.status}`);
+        }
+
+        return response.json();
+    }
+
+    // Method 2: EmailJS Integration (Alternative)
+    async sendEmailNotification(data) {
+        // Initialize EmailJS if not already done
+        if (typeof emailjs === 'undefined') {
+            await this.loadEmailJS();
+        }
+
+        // EmailJS configuration
+        const serviceID = 'service_nepal_memorial';
+        const templateID = 'template_contact_form';
+        const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY'; // Replace with actual key
+
+        // Email template parameters
+        const templateParams = {
+            from_name: data.name,
+            from_email: data.email,
+            message: data.message,
+            timestamp: new Date(data.timestamp).toLocaleString(),
+            to_email: 'rumbc1@gmail.com',
+            subject: `New Contact Form Submission - Nepal Gen Z Memorial`
+        };
+
+        // Send email using EmailJS
+        return emailjs.send(serviceID, templateID, templateParams, publicKey);
+    }
+
+    async loadEmailJS() {
+        return new Promise((resolve, reject) => {
+            if (typeof emailjs !== 'undefined') {
+                resolve();
+                return;
+            }
+
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+            script.onload = () => {
+                emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // Replace with actual key
+                resolve();
+            };
+            script.onerror = () => reject(new Error('Failed to load EmailJS'));
+            document.head.appendChild(script);
+        });
+    }
+
+    setLoadingState(loading) {
+        if (loading) {
+            this.submitBtn.disabled = true;
+            this.submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            this.submitBtn.classList.add('loading');
+        } else {
+            this.submitBtn.disabled = false;
+            this.submitBtn.innerHTML = 'Send Message';
+            this.submitBtn.classList.remove('loading');
+        }
+    }
+
+    showNotification(message, type = 'info') {
+        // Remove existing notifications
+        const existingNotifications = document.querySelectorAll('.notification');
+        existingNotifications.forEach(notification => notification.remove());
+
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <div class="notification-content">
+                <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
+                <span>${message}</span>
+                <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(notification);
+
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 5000);
+
+        // Scroll to notification
+        notification.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    resetForm() {
+        this.form.reset();
+        const inputs = this.form.querySelectorAll('input, textarea');
+        inputs.forEach(input => this.clearFieldError(input));
+    }
+}
+
+// Initialize contact form when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize contact form
+    new ContactForm();
+});

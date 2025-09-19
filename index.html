@@ -617,10 +617,16 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <!-- 🔧 SETUP REQUIRED: Replace 'YOUR_FORMSPREE_ID_HERE' with your actual Formspree form ID -->
+                    <!-- This action attribute serves as a fallback if JavaScript is disabled -->
+                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+                        <input type="text" name="name" placeholder="Your Name">
+                        <input type="email" name="email" placeholder="Your Email">
+                        <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+                        <!-- Hidden fields for Formspree configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Nepal Gen Z Memorial">
+                        <input type="hidden" name="_cc" value="rumbc1@gmail.com">
+                        <input type="hidden" name="_next" value="https://main.d1bixeem5bp8hx.amplifyapp.com/#contact">
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
