@@ -2,6 +2,12 @@
 
 A tribute website honoring the brave students and youth who participated in the September 2025 Nepal Gen Z Protests. This memorial site is inspired by the Bangladesh martyrs memorial (shohid.info) and serves as a digital monument to remember those who stood for democracy, justice, and the future of Nepal.
 
+## 🌐 Live Website
+
+**Deployment URL:** [https://main.d1bixeem5bp8hx.amplifyapp.com/](https://main.d1bixeem5bp8hx.amplifyapp.com/)
+
+The website is live and accessible worldwide, featuring responsive design optimized for all devices including mobile browsers with enhanced video playback support.
+
 ## Features
 
 ### 🎨 Design & User Experience
