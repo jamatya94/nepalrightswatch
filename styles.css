@@ -343,6 +343,166 @@ body {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
 }
 
+/* Breaking News Section */
+.breaking-news-section {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--nepal-white) 100%);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.news-card {
+    background: var(--nepal-white);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--gray-300);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.news-card.urgent {
+    border-left-color: var(--nepal-red);
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.02) 0%, var(--nepal-white) 100%);
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.news-badge {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: var(--nepal-white);
+}
+
+.news-badge.breaking {
+    background: var(--nepal-red);
+    animation: pulse 2s infinite;
+}
+
+.news-badge.international {
+    background: var(--nepal-blue);
+}
+
+.news-badge.government {
+    background: var(--success-green);
+}
+
+.news-badge.social {
+    background: var(--nepal-gold);
+}
+
+.news-badge.analysis {
+    background: var(--gray-600);
+}
+
+.news-badge.memorial {
+    background: var(--dark-red);
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.news-time {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.news-card h3 {
+    color: var(--gray-800);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.news-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.news-source {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--nepal-blue);
+    font-weight: 500;
+}
+
+.news-source a {
+    color: var(--nepal-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.news-source a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+.international-quotes {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-2xl);
+    border-top: 2px solid var(--gray-200);
+}
+
+.international-quotes h3 {
+    text-align: center;
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xl);
+}
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.quote-card {
+    background: var(--nepal-white);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    border-left: 4px solid var(--nepal-red);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote-card blockquote {
+    font-style: italic;
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-base);
+}
+
+.quote-card cite {
+    color: var(--nepal-blue);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
 /* Martyrs Section */
 .martyrs {
     padding: var(--spacing-3xl) 0;
