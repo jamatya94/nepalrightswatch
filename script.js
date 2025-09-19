@@ -216,15 +216,9 @@ const martyrsData = [
 const sketchesData = [
     {
         id: 1,
-        name: "Binod Design",
+        name: "Binod Maharjan - Artistic Design",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Sketches/Binod Design.png",
         description: "Artistic design sketch of Binod Maharjan"
-    },
-    {
-        id: 2,
-        name: "Binod Portrait",
-        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Sketches/Binod.png",
-        description: "Portrait sketch of Binod Maharjan"
     }
 ];
 
@@ -233,7 +227,7 @@ const stencilsData = [
     // Abhishek Shrestha
     {
         id: 1,
-        name: "Abhishek Shrestha - Artwork 1",
+        name: "Abhishek Shrestha - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Abhishek Shrestha/Untitled_Artwork.jpg",
         martyr: "Abhishek Shrestha",
         description: "Stencil artwork of Abhishek Shrestha"
@@ -241,7 +235,7 @@ const stencilsData = [
     // Ayush Thapa
     {
         id: 2,
-        name: "Ayush Thapa - Artwork 1",
+        name: "Ayush Thapa - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58.602Z",
         martyr: "Ayush Thapa",
         description: "Stencil artwork of Ayush Thapa"
@@ -249,180 +243,164 @@ const stencilsData = [
     // Bijay Chaudhary
     {
         id: 3,
-        name: "Bijay Chaudhary - Artwork 1",
+        name: "Bijay Chaudhary - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bijay Chaudhary/Bijay_Chaudhary.jpg",
         martyr: "Bijay Chaudhary",
         description: "Stencil artwork of Bijay Chaudhary"
     },
-    // Bimal Babu Bhatta
-    {
-        id: 4,
-        name: "Bimal Babu Bhatta - Artwork 1",
-        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bimal Babu Bhatta/Bimal_Babu_Bhatta.jpg",
-        martyr: "Bimal Babu Bhatta",
-        description: "Stencil artwork of Bimal Babu Bhatta"
-    },
     // Binod Maharjan
     {
-        id: 5,
-        name: "Binod Maharjan - Artwork 1",
+        id: 4,
+        name: "Binod Maharjan - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Binod Maharjan/Untitled_Artwork.jpg",
         martyr: "Binod Maharjan",
         description: "Stencil artwork of Binod Maharjan"
     },
     // Buddhi Bahadur Tamang
     {
-        id: 6,
-        name: "Buddhi Bahadur Tamang - Artwork 1",
+        id: 5,
+        name: "Buddhi Bahadur Tamang - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Buddhi Bahadur Tamang/Buddhi Bahadur Tamang.jpg",
         martyr: "Buddhi Bahadur Tamang",
         description: "Stencil artwork of Buddhi Bahadur Tamang"
     },
     // Dev Kumar Subedi
     {
-        id: 7,
-        name: "Dev Kumar Subedi - Artwork 1",
+        id: 6,
+        name: "Dev Kumar Subedi - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dev Kumar Subedi/File - 2025-09-15T02_15_27.138Z",
         martyr: "Dev Kumar Subedi",
         description: "Stencil artwork of Dev Kumar Subedi"
     },
     // Dhiraj Shrestha
     {
-        id: 8,
-        name: "Dhiraj Shrestha - Artwork 1",
+        id: 7,
+        name: "Dhiraj Shrestha - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dhiraj Shrestha/Dhiraj_Shrestha.jpg",
         martyr: "Dhiraj Shrestha",
         description: "Stencil artwork of Dhiraj Shrestha"
     },
     // Dipesh Sunuwar
     {
-        id: 9,
-        name: "Dipesh Sunuwar - Artwork 1",
+        id: 8,
+        name: "Dipesh Sunuwar - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dipesh Sunuwar/Dipesh_Sunuwar.jpg",
         martyr: "Dipesh Sunuwar",
         description: "Stencil artwork of Dipesh Sunuwar"
     },
     // Gaurav Joshi
     {
-        id: 10,
-        name: "Gaurav Joshi - Artwork 1",
+        id: 9,
+        name: "Gaurav Joshi - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Gaurav Joshi/Untitled_Artwork.jpg",
         martyr: "Gaurav Joshi",
         description: "Stencil artwork of Gaurav Joshi"
     },
     // Ishwat Adhikari
     {
-        id: 11,
-        name: "Ishwat Adhikari - Artwork 1",
+        id: 10,
+        name: "Ishwat Adhikari - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ishwat Adhikari/Untitled_Artwork.jpg",
         martyr: "Ishwat Adhikari",
         description: "Stencil artwork of Ishwat Adhikari"
     },
     // Mishal Saru Magar
     {
-        id: 12,
-        name: "Mishal Saru Magar - Artwork 1",
+        id: 11,
+        name: "Mishal Saru Magar - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mishal Saru Magar/Mishal_Saru_Magar.jpg",
         martyr: "Mishal Saru Magar",
         description: "Stencil artwork of Mishal Saru Magar"
     },
     // Mohan Sardar
     {
-        id: 13,
-        name: "Mohan Sardar - Artwork 1",
+        id: 12,
+        name: "Mohan Sardar - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mohan Sardar/Mohan_Sardar.jpg",
         martyr: "Mohan Sardar",
         description: "Stencil artwork of Mohan Sardar"
     },
     // Prabin Kulung
     {
-        id: 14,
-        name: "Prabin Kulung - Artwork 1",
+        id: 13,
+        name: "Prabin Kulung - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Prabin Kulung/Prabin_Kulung.jpg",
         martyr: "Prabin Kulung",
         description: "Stencil artwork of Prabin Kulung"
     },
     // Rashik Khatiwoda
     {
-        id: 15,
-        name: "Rashik Khatiwoda - Artwork 1",
+        id: 14,
+        name: "Rashik Khatiwoda - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Rashik Khatiwoda/Rashik_Khatiwoda.jpg",
         martyr: "Rashik Khatiwoda",
         description: "Stencil artwork of Rashik Khatiwoda"
     },
-    // Roshan Neupane
-    {
-        id: 16,
-        name: "Roshan Neupane - Artwork 1",
-        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Roshan Neupane/Roshan_Neupane.jpg",
-        martyr: "Roshan Neupane",
-        description: "Stencil artwork of Roshan Neupane"
-    },
     // Santosh Bishwakarma
     {
-        id: 17,
-        name: "Santosh Bishwakarma - Artwork 1",
+        id: 15,
+        name: "Santosh Bishwakarma - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Santosh Bishwakarma/Santosh_Bishwakarma.jpg",
         martyr: "Santosh Bishwakarma",
         description: "Stencil artwork of Santosh Bishwakarma"
     },
     // Sauron Kishor Shrestha
     {
-        id: 18,
-        name: "Sauron Kishor Shrestha - Artwork 1",
+        id: 16,
+        name: "Sauron Kishor Shrestha - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sauron Kishor Shrestha/Sauron_Kishor_Shrestha.jpg",
         martyr: "Sauron Kishor Shrestha",
         description: "Stencil artwork of Sauron Kishor Shrestha"
     },
     // Shri Krishna Shrestha
     {
-        id: 19,
-        name: "Shri Krishna Shrestha - Artwork 1",
+        id: 17,
+        name: "Shri Krishna Shrestha - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shri Krishna Shrestha/Shri_Krishna_Shrestha.jpg",
         martyr: "Shri Krishna Shrestha",
         description: "Stencil artwork of Shri Krishna Shrestha"
     },
     // Shriyam
     {
-        id: 20,
-        name: "Shriyam - Artwork 1",
-        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shriyam layers/Shriyam.jpg",
+        id: 18,
+        name: "Shriyam - Artwork",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shriyam layers/Untitled_Artwork 7.jpg",
         martyr: "Shriyam",
         description: "Stencil artwork of Shriyam"
     },
     // Subash Bohara
     {
-        id: 21,
-        name: "Subash Bohara - Artwork 1",
+        id: 19,
+        name: "Subash Bohara - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Subash Bohara/Subash_Bohara.jpg",
         martyr: "Subash Bohara",
         description: "Stencil artwork of Subash Bohara"
     },
     // Sulav Raj Shrestha
     {
-        id: 22,
-        name: "Sulav Raj Shrestha - Artwork 1",
+        id: 20,
+        name: "Sulav Raj Shrestha - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sulav Raj Shrestha/Sulav_Raj_Shrestha.jpg",
         martyr: "Sulav Raj Shrestha",
         description: "Stencil artwork of Sulav Raj Shrestha"
     },
     // General Info and Text stencils
     {
-        id: 23,
+        id: 21,
         name: "Info Stencil",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Info.jpg",
         martyr: "General",
         description: "General information stencil artwork"
     },
     {
-        id: 24,
+        id: 22,
         name: "Text Grey Stencil",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Text grey.jpg",
         martyr: "General",
         description: "Grey text stencil artwork"
     },
     {
-        id: 25,
+        id: 23,
         name: "Text Red Stencil",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Text red.jpg",
         martyr: "General",
@@ -526,7 +504,7 @@ function loadStencils() {
 // Create gallery card for sketches and stencils
 function createGalleryCard(item, index, type) {
     const card = document.createElement('div');
-    card.className = `${type}-card fade-in`;
+    card.className = `gallery-card ${type}-card fade-in`;
     card.style.animationDelay = `${index * 0.1}s`;
     card.dataset[`${type}Id`] = item.id;
     
@@ -537,8 +515,8 @@ function createGalleryCard(item, index, type) {
     const martyr = item.martyr ? `In memory of: ${item.martyr}` : '';
     
     card.innerHTML = `
-        <div class="${type}-image-container">
-            <img src="${imageSrc}" alt="${title}" class="${type}-image" loading="lazy">
+        <div class="gallery-image-container">
+            <img src="${imageSrc}" alt="${title}" class="gallery-image" loading="lazy">
             <div class="image-overlay">
                 <div class="overlay-content">
                     <h3>${title}</h3>
@@ -548,6 +526,11 @@ function createGalleryCard(item, index, type) {
             </div>
         </div>
     `;
+    
+    // Add click event listener to show modal for stencils and sketches
+    card.addEventListener('click', () => {
+        showImageModal(item, type);
+    });
     
     return card;
 }
@@ -663,3 +646,61 @@ function updateStatistics() {
         arrestedCount.textContent = '1000+';
     }
 }
+
+// Modal functionality
+function showImageModal(item, type) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMartyr = document.getElementById('modalMartyr');
+    const modalDescription = document.getElementById('modalDescription');
+    
+    // Set modal content
+    modalImage.src = item.image;
+    modalImage.alt = item.name || item.title;
+    modalTitle.textContent = item.name || item.title;
+    modalDescription.textContent = item.description;
+    
+    // Show martyr information for stencils
+    if (item.martyr) {
+        modalMartyr.textContent = `In memory of: ${item.martyr}`;
+        modalMartyr.style.display = 'block';
+    } else {
+        modalMartyr.style.display = 'none';
+    }
+    
+    // Show modal
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Initialize modal event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    const modalClose = document.querySelector('.modal-close');
+    
+    // Close modal when clicking the close button
+    if (modalClose) {
+        modalClose.addEventListener('click', closeImageModal);
+    }
+    
+    // Close modal when clicking outside the content
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeImageModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeImageModal();
+        }
+    });
+});
