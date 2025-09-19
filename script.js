@@ -5,7 +5,7 @@ const martyrsData = [
     {
         id: 1,
         name: "Abhishek Chaulagain",
-        image: "s3://nepalgenz/Posters/Abhishek_Chaulagain.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Abhishek_Chaulagain.png",
         age: "22",
         location: "Kathmandu",
         details: "Student activist who led peaceful demonstrations for democratic rights."
@@ -13,7 +13,7 @@ const martyrsData = [
     {
         id: 2,
         name: "Abhishek Shrestha",
-        image: "s3://nepalgenz/Posters/Abhishek.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Abhishek.png",
         age: "21",
         location: "Lalitpur",
         details: "Engineering student and social justice advocate."
@@ -21,7 +21,7 @@ const martyrsData = [
     {
         id: 3,
         name: "Arjun",
-        image: "s3://nepalgenz/Posters/Arjun.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Arjun.png",
         age: "23",
         location: "Bhaktapur",
         details: "Youth leader passionate about educational reforms."
@@ -29,7 +29,7 @@ const martyrsData = [
     {
         id: 4,
         name: "Ayush Thapa",
-        image: "s3://nepalgenz/Posters/Ayush.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Ayush.png",
         age: "20",
         location: "Kathmandu",
         details: "Student union representative and democracy advocate."
@@ -37,7 +37,7 @@ const martyrsData = [
     {
         id: 5,
         name: "Babu",
-        image: "s3://nepalgenz/Posters/Babu.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Babu.png",
         age: "24",
         location: "Pokhara",
         details: "Community organizer and youth mentor."
@@ -45,7 +45,7 @@ const martyrsData = [
     {
         id: 6,
         name: "Bijay Chaudhary",
-        image: "s3://nepalgenz/Posters/Bijay.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Bijay.png",
         age: "22",
         location: "Chitwan",
         details: "Student journalist and human rights activist."
@@ -53,7 +53,7 @@ const martyrsData = [
     {
         id: 7,
         name: "Binod Maharjan",
-        image: "s3://nepalgenz/Posters/Binod.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Binod.png",
         age: "21",
         location: "Kathmandu",
         details: "Computer science student and digital rights advocate."
@@ -61,7 +61,7 @@ const martyrsData = [
     {
         id: 8,
         name: "Buddhi Bahadur Tamang",
-        image: "s3://nepalgenz/Posters/Buddhi.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Buddhi.png",
         age: "23",
         location: "Sindhupalchok",
         details: "Rural youth leader and social worker."
@@ -69,7 +69,7 @@ const martyrsData = [
     {
         id: 9,
         name: "Deepak",
-        image: "s3://nepalgenz/Posters/Deepak.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Deepak.png",
         age: "22",
         location: "Kathmandu",
         details: "Student activist and community organizer."
@@ -77,7 +77,7 @@ const martyrsData = [
     {
         id: 10,
         name: "Dev Kumar Subedi",
-        image: "s3://nepalgenz/Posters/Dev Kumar.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Dev Kumar.png",
         age: "24",
         location: "Kaski",
         details: "Environmental activist and student leader."
@@ -85,7 +85,7 @@ const martyrsData = [
     {
         id: 11,
         name: "Dhiraj Shrestha",
-        image: "s3://nepalgenz/Posters/Dhiraj.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Dhiraj.png",
         age: "21",
         location: "Kathmandu",
         details: "Medical student and healthcare rights advocate."
@@ -93,7 +93,7 @@ const martyrsData = [
     {
         id: 12,
         name: "Dipesh Sunuwar",
-        image: "s3://nepalgenz/Posters/Dipesh.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Dipesh.png",
         age: "23",
         location: "Dolakha",
         details: "Indigenous rights activist and student leader."
@@ -101,7 +101,7 @@ const martyrsData = [
     {
         id: 13,
         name: "Gaurav Joshi",
-        image: "s3://nepalgenz/Posters/Gaurav.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Gaurav.png",
         age: "22",
         location: "Kathmandu",
         details: "Engineering student and technology for social good advocate."
@@ -109,7 +109,7 @@ const martyrsData = [
     {
         id: 14,
         name: "Ishwat Adhikari",
-        image: "s3://nepalgenz/Posters/Ishwat.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Ishwat.png",
         age: "21",
         location: "Lalitpur",
         details: "Student union leader and democracy advocate."
@@ -117,7 +117,7 @@ const martyrsData = [
     {
         id: 15,
         name: "Mishal Saru Magar",
-        image: "s3://nepalgenz/Posters/Mishal.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Mishal.png",
         age: "20",
         location: "Tanahun",
         details: "Youth activist and women's rights advocate."
@@ -125,7 +125,7 @@ const martyrsData = [
     {
         id: 16,
         name: "Mohan Sardar",
-        image: "s3://nepalgenz/Posters/Mohan.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Mohan.png",
         age: "24",
         location: "Sarlahi",
         details: "Community leader and social justice advocate."
@@ -133,7 +133,7 @@ const martyrsData = [
     {
         id: 17,
         name: "Prabin Kulung",
-        image: "s3://nepalgenz/Posters/Prabin.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Prabin.png",
         age: "22",
         location: "Sankhuwasabha",
         details: "Mountain youth leader and environmental activist."
@@ -141,7 +141,7 @@ const martyrsData = [
     {
         id: 18,
         name: "Ramesh",
-        image: "s3://nepalgenz/Posters/Ramesh.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Ramesh.png",
         age: "23",
         location: "Kathmandu",
         details: "Student activist and community organizer."
@@ -149,7 +149,7 @@ const martyrsData = [
     {
         id: 19,
         name: "Rashik Khatiwoda",
-        image: "s3://nepalgenz/Posters/Rashik.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Rashik.png",
         age: "21",
         location: "Kathmandu",
         details: "Student leader and democracy advocate."
@@ -157,7 +157,7 @@ const martyrsData = [
     {
         id: 20,
         name: "Santosh Bishwakarma",
-        image: "s3://nepalgenz/Posters/Santosh.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Santosh.png",
         age: "22",
         location: "Kathmandu",
         details: "Social justice advocate and student activist."
@@ -165,7 +165,7 @@ const martyrsData = [
     {
         id: 21,
         name: "Sauron Kishor Shrestha",
-        image: "s3://nepalgenz/Posters/Sauran.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Sauran.png",
         age: "23",
         location: "Kathmandu",
         details: "Student union representative and youth leader."
@@ -173,7 +173,7 @@ const martyrsData = [
     {
         id: 22,
         name: "Shri Krishna Shrestha",
-        image: "s3://nepalgenz/Posters/Shri Krishna.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Shri Krishna.png",
         age: "24",
         location: "Kathmandu",
         details: "Student activist and community organizer."
@@ -181,7 +181,7 @@ const martyrsData = [
     {
         id: 23,
         name: "Shriyam",
-        image: "s3://nepalgenz/Posters/Shriyam.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Shriyam.png",
         age: "21",
         location: "Kathmandu",
         details: "Youth leader and social justice advocate."
@@ -189,7 +189,7 @@ const martyrsData = [
     {
         id: 24,
         name: "Subash Bohara",
-        image: "s3://nepalgenz/Posters/Subhash.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Subhash.png",
         age: "22",
         location: "Kathmandu",
         details: "Student activist and democracy advocate."
@@ -197,7 +197,7 @@ const martyrsData = [
     {
         id: 25,
         name: "Sulav Raj Shrestha",
-        image: "s3://nepalgenz/Posters/Sulav.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Sulav.png",
         age: "23",
         location: "Kathmandu",
         details: "Student leader and community organizer."
@@ -205,7 +205,7 @@ const martyrsData = [
     {
         id: 26,
         name: "Yogendra",
-        image: "s3://nepalgenz/Posters/Yogendra.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Posters/Yogendra.png",
         age: "24",
         location: "Kathmandu",
         details: "Youth activist and social justice advocate."
@@ -217,13 +217,13 @@ const sketchesData = [
     {
         id: 1,
         name: "Binod Design",
-        image: "s3://nepalgenz/Sketches/Binod Design.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Sketches/Binod Design.png",
         description: "Artistic design sketch of Binod Maharjan"
     },
     {
         id: 2,
         name: "Binod Portrait",
-        image: "s3://nepalgenz/Sketches/Binod.png",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Sketches/Binod.png",
         description: "Portrait sketch of Binod Maharjan"
     }
 ];
@@ -234,21 +234,21 @@ const stencilsData = [
     {
         id: 1,
         name: "Abhishek Shrestha - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Abhishek Shrestha/Untitled_Artwork.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Abhishek Shrestha/Untitled_Artwork.jpg",
         martyr: "Abhishek Shrestha",
         description: "Stencil artwork of Abhishek Shrestha"
     },
     {
         id: 2,
         name: "Abhishek Shrestha - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Abhishek Shrestha/Untitled_Artwork 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Abhishek Shrestha/Untitled_Artwork 2.jpg",
         martyr: "Abhishek Shrestha",
         description: "Stencil artwork of Abhishek Shrestha"
     },
     {
         id: 3,
         name: "Abhishek Shrestha - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Abhishek Shrestha/Untitled_Artwork 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Abhishek Shrestha/Untitled_Artwork 3.jpg",
         martyr: "Abhishek Shrestha",
         description: "Stencil artwork of Abhishek Shrestha"
     },
@@ -256,21 +256,21 @@ const stencilsData = [
     {
         id: 4,
         name: "Ayush Thapa - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58.602Z",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58.602Z",
         martyr: "Ayush Thapa",
         description: "Stencil artwork of Ayush Thapa"
     },
     {
         id: 5,
         name: "Ayush Thapa - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58(1).602Z",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58(1).602Z",
         martyr: "Ayush Thapa",
         description: "Stencil artwork of Ayush Thapa"
     },
     {
         id: 6,
         name: "Ayush Thapa - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58(2).602Z",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58(2).602Z",
         martyr: "Ayush Thapa",
         description: "Stencil artwork of Ayush Thapa"
     },
@@ -278,21 +278,21 @@ const stencilsData = [
     {
         id: 7,
         name: "Bijay Chaudhary - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Bijay Chaudhary/Bijay_Chaudhary.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bijay Chaudhary/Bijay_Chaudhary.jpg",
         martyr: "Bijay Chaudhary",
         description: "Stencil artwork of Bijay Chaudhary"
     },
     {
         id: 8,
         name: "Bijay Chaudhary - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Bijay Chaudhary/Bijay_Chaudhary 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bijay Chaudhary/Bijay_Chaudhary 2.jpg",
         martyr: "Bijay Chaudhary",
         description: "Stencil artwork of Bijay Chaudhary"
     },
     {
         id: 9,
         name: "Bijay Chaudhary - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Bijay Chaudhary/Bijay_Chaudhary 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bijay Chaudhary/Bijay_Chaudhary 3.jpg",
         martyr: "Bijay Chaudhary",
         description: "Stencil artwork of Bijay Chaudhary"
     },
@@ -300,21 +300,21 @@ const stencilsData = [
     {
         id: 10,
         name: "Bimal Babu Bhatta - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Bimal Babu Bhatta/Bimal_Babu_Bhatta.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bimal Babu Bhatta/Bimal_Babu_Bhatta.jpg",
         martyr: "Bimal Babu Bhatta",
         description: "Stencil artwork of Bimal Babu Bhatta"
     },
     {
         id: 11,
         name: "Bimal Babu Bhatta - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Bimal Babu Bhatta/Bimal_Babu_Bhatta 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bimal Babu Bhatta/Bimal_Babu_Bhatta 2.jpg",
         martyr: "Bimal Babu Bhatta",
         description: "Stencil artwork of Bimal Babu Bhatta"
     },
     {
         id: 12,
         name: "Bimal Babu Bhatta - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Bimal Babu Bhatta/Bimal_Babu_Bhatta 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bimal Babu Bhatta/Bimal_Babu_Bhatta 3.jpg",
         martyr: "Bimal Babu Bhatta",
         description: "Stencil artwork of Bimal Babu Bhatta"
     },
@@ -322,21 +322,21 @@ const stencilsData = [
     {
         id: 13,
         name: "Binod Maharjan - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Binod Maharjan/Untitled_Artwork.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Binod Maharjan/Untitled_Artwork.jpg",
         martyr: "Binod Maharjan",
         description: "Stencil artwork of Binod Maharjan"
     },
     {
         id: 14,
         name: "Binod Maharjan - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Binod Maharjan/Untitled_Artwork 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Binod Maharjan/Untitled_Artwork 2.jpg",
         martyr: "Binod Maharjan",
         description: "Stencil artwork of Binod Maharjan"
     },
     {
         id: 15,
         name: "Binod Maharjan - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Binod Maharjan/Untitled_Artwork 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Binod Maharjan/Untitled_Artwork 3.jpg",
         martyr: "Binod Maharjan",
         description: "Stencil artwork of Binod Maharjan"
     },
@@ -344,21 +344,21 @@ const stencilsData = [
     {
         id: 16,
         name: "Buddhi Bahadur Tamang - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Buddhi Bahadur Tamang/Buddhi Bahadur Tamang.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Buddhi Bahadur Tamang/Buddhi Bahadur Tamang.jpg",
         martyr: "Buddhi Bahadur Tamang",
         description: "Stencil artwork of Buddhi Bahadur Tamang"
     },
     {
         id: 17,
         name: "Buddhi Bahadur Tamang - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Buddhi Bahadur Tamang/Buddhi Bahadur Tamang 1.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Buddhi Bahadur Tamang/Buddhi Bahadur Tamang 1.jpg",
         martyr: "Buddhi Bahadur Tamang",
         description: "Stencil artwork of Buddhi Bahadur Tamang"
     },
     {
         id: 18,
         name: "Buddhi Bahadur Tamang - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Buddhi Bahadur Tamang/Buddhi Bahadur Tamang 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Buddhi Bahadur Tamang/Buddhi Bahadur Tamang 2.jpg",
         martyr: "Buddhi Bahadur Tamang",
         description: "Stencil artwork of Buddhi Bahadur Tamang"
     },
@@ -366,21 +366,21 @@ const stencilsData = [
     {
         id: 19,
         name: "Dev Kumar Subedi - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Dev Kumar Subedi/File - 2025-09-15T02_15_27.138Z",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dev Kumar Subedi/File - 2025-09-15T02_15_27.138Z",
         martyr: "Dev Kumar Subedi",
         description: "Stencil artwork of Dev Kumar Subedi"
     },
     {
         id: 20,
         name: "Dev Kumar Subedi - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Dev Kumar Subedi/File - 2025-09-15T02_15_27(1).138Z",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dev Kumar Subedi/File - 2025-09-15T02_15_27(1).138Z",
         martyr: "Dev Kumar Subedi",
         description: "Stencil artwork of Dev Kumar Subedi"
     },
     {
         id: 21,
         name: "Dev Kumar Subedi - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Dev Kumar Subedi/File - 2025-09-15T02_15_27(2).138Z",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dev Kumar Subedi/File - 2025-09-15T02_15_27(2).138Z",
         martyr: "Dev Kumar Subedi",
         description: "Stencil artwork of Dev Kumar Subedi"
     },
@@ -388,21 +388,21 @@ const stencilsData = [
     {
         id: 22,
         name: "Dhiraj Shrestha - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Dhiraj Shrestha/Dhiraj_Shrestha.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dhiraj Shrestha/Dhiraj_Shrestha.jpg",
         martyr: "Dhiraj Shrestha",
         description: "Stencil artwork of Dhiraj Shrestha"
     },
     {
         id: 23,
         name: "Dhiraj Shrestha - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Dhiraj Shrestha/Dhiraj_Shrestha 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dhiraj Shrestha/Dhiraj_Shrestha 2.jpg",
         martyr: "Dhiraj Shrestha",
         description: "Stencil artwork of Dhiraj Shrestha"
     },
     {
         id: 24,
         name: "Dhiraj Shrestha - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Dhiraj Shrestha/Dhiraj_Shrestha 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dhiraj Shrestha/Dhiraj_Shrestha 3.jpg",
         martyr: "Dhiraj Shrestha",
         description: "Stencil artwork of Dhiraj Shrestha"
     },
@@ -410,21 +410,21 @@ const stencilsData = [
     {
         id: 25,
         name: "Dipesh Sunuwar - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Dipesh Sunuwar/Dipesh_Sunuwar.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dipesh Sunuwar/Dipesh_Sunuwar.jpg",
         martyr: "Dipesh Sunuwar",
         description: "Stencil artwork of Dipesh Sunuwar"
     },
     {
         id: 26,
         name: "Dipesh Sunuwar - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Dipesh Sunuwar/Dipesh_Sunuwar 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dipesh Sunuwar/Dipesh_Sunuwar 3.jpg",
         martyr: "Dipesh Sunuwar",
         description: "Stencil artwork of Dipesh Sunuwar"
     },
     {
         id: 27,
         name: "Dipesh Sunuwar - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Dipesh Sunuwar/Dipesh_Sunuwar 4.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dipesh Sunuwar/Dipesh_Sunuwar 4.jpg",
         martyr: "Dipesh Sunuwar",
         description: "Stencil artwork of Dipesh Sunuwar"
     },
@@ -432,21 +432,21 @@ const stencilsData = [
     {
         id: 28,
         name: "Gaurav Joshi - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Gaurav Joshi/Untitled_Artwork.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Gaurav Joshi/Untitled_Artwork.jpg",
         martyr: "Gaurav Joshi",
         description: "Stencil artwork of Gaurav Joshi"
     },
     {
         id: 29,
         name: "Gaurav Joshi - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Gaurav Joshi/Untitled_Artwork 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Gaurav Joshi/Untitled_Artwork 2.jpg",
         martyr: "Gaurav Joshi",
         description: "Stencil artwork of Gaurav Joshi"
     },
     {
         id: 30,
         name: "Gaurav Joshi - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Gaurav Joshi/Untitled_Artwork 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Gaurav Joshi/Untitled_Artwork 3.jpg",
         martyr: "Gaurav Joshi",
         description: "Stencil artwork of Gaurav Joshi"
     },
@@ -454,21 +454,21 @@ const stencilsData = [
     {
         id: 31,
         name: "Ishwat Adhikari - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Ishwat Adhikari/Untitled_Artwork.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ishwat Adhikari/Untitled_Artwork.jpg",
         martyr: "Ishwat Adhikari",
         description: "Stencil artwork of Ishwat Adhikari"
     },
     {
         id: 32,
         name: "Ishwat Adhikari - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Ishwat Adhikari/Untitled_Artwork 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ishwat Adhikari/Untitled_Artwork 2.jpg",
         martyr: "Ishwat Adhikari",
         description: "Stencil artwork of Ishwat Adhikari"
     },
     {
         id: 33,
         name: "Ishwat Adhikari - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Ishwat Adhikari/Untitled_Artwork 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ishwat Adhikari/Untitled_Artwork 3.jpg",
         martyr: "Ishwat Adhikari",
         description: "Stencil artwork of Ishwat Adhikari"
     },
@@ -476,21 +476,21 @@ const stencilsData = [
     {
         id: 34,
         name: "Mishal Saru Magar - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Mishal Saru Magar/Mishal_Saru_Magar.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mishal Saru Magar/Mishal_Saru_Magar.jpg",
         martyr: "Mishal Saru Magar",
         description: "Stencil artwork of Mishal Saru Magar"
     },
     {
         id: 35,
         name: "Mishal Saru Magar - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Mishal Saru Magar/Mishal_Saru_Magar 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mishal Saru Magar/Mishal_Saru_Magar 2.jpg",
         martyr: "Mishal Saru Magar",
         description: "Stencil artwork of Mishal Saru Magar"
     },
     {
         id: 36,
         name: "Mishal Saru Magar - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Mishal Saru Magar/Mishal_Saru_Magar 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mishal Saru Magar/Mishal_Saru_Magar 3.jpg",
         martyr: "Mishal Saru Magar",
         description: "Stencil artwork of Mishal Saru Magar"
     },
@@ -498,21 +498,21 @@ const stencilsData = [
     {
         id: 37,
         name: "Mohan Sardar - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Mohan Sardar/Mohan_Sardar.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mohan Sardar/Mohan_Sardar.jpg",
         martyr: "Mohan Sardar",
         description: "Stencil artwork of Mohan Sardar"
     },
     {
         id: 38,
         name: "Mohan Sardar - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Mohan Sardar/Mohan_Sardar 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mohan Sardar/Mohan_Sardar 2.jpg",
         martyr: "Mohan Sardar",
         description: "Stencil artwork of Mohan Sardar"
     },
     {
         id: 39,
         name: "Mohan Sardar - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Mohan Sardar/Mohan_Sardar 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mohan Sardar/Mohan_Sardar 3.jpg",
         martyr: "Mohan Sardar",
         description: "Stencil artwork of Mohan Sardar"
     },
@@ -520,21 +520,21 @@ const stencilsData = [
     {
         id: 40,
         name: "Prabin Kulung - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Prabin Kulung/Prabin_KULUNG.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Prabin Kulung/Prabin_KULUNG.jpg",
         martyr: "Prabin Kulung",
         description: "Stencil artwork of Prabin Kulung"
     },
     {
         id: 41,
         name: "Prabin Kulung - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Prabin Kulung/Prabin_KULUNG 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Prabin Kulung/Prabin_KULUNG 2.jpg",
         martyr: "Prabin Kulung",
         description: "Stencil artwork of Prabin Kulung"
     },
     {
         id: 42,
         name: "Prabin Kulung - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Prabin Kulung/Prabin_KULUNG 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Prabin Kulung/Prabin_KULUNG 3.jpg",
         martyr: "Prabin Kulung",
         description: "Stencil artwork of Prabin Kulung"
     },
@@ -542,21 +542,21 @@ const stencilsData = [
     {
         id: 43,
         name: "Rashik Khatiwoda - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Rashik Khatiwoda/Untitled_Artwork.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Rashik Khatiwoda/Untitled_Artwork.jpg",
         martyr: "Rashik Khatiwoda",
         description: "Stencil artwork of Rashik Khatiwoda"
     },
     {
         id: 44,
         name: "Rashik Khatiwoda - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Rashik Khatiwoda/Untitled_Artwork 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Rashik Khatiwoda/Untitled_Artwork 2.jpg",
         martyr: "Rashik Khatiwoda",
         description: "Stencil artwork of Rashik Khatiwoda"
     },
     {
         id: 45,
         name: "Rashik Khatiwoda - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Rashik Khatiwoda/Untitled_Artwork 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Rashik Khatiwoda/Untitled_Artwork 3.jpg",
         martyr: "Rashik Khatiwoda",
         description: "Stencil artwork of Rashik Khatiwoda"
     },
@@ -564,21 +564,21 @@ const stencilsData = [
     {
         id: 46,
         name: "Roshan Neupane - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Roshan Neupane/Roshan_Neupane.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Roshan Neupane/Roshan_Neupane.jpg",
         martyr: "Roshan Neupane",
         description: "Stencil artwork of Roshan Neupane"
     },
     {
         id: 47,
         name: "Roshan Neupane - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Roshan Neupane/Roshan_Neupane 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Roshan Neupane/Roshan_Neupane 2.jpg",
         martyr: "Roshan Neupane",
         description: "Stencil artwork of Roshan Neupane"
     },
     {
         id: 48,
         name: "Roshan Neupane - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Roshan Neupane/Roshan_Neupane 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Roshan Neupane/Roshan_Neupane 3.jpg",
         martyr: "Roshan Neupane",
         description: "Stencil artwork of Roshan Neupane"
     },
@@ -586,21 +586,21 @@ const stencilsData = [
     {
         id: 49,
         name: "Santosh Bishwakarma - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Santosh Bishwakarma/Untitled_Artwork.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Santosh Bishwakarma/Untitled_Artwork.jpg",
         martyr: "Santosh Bishwakarma",
         description: "Stencil artwork of Santosh Bishwakarma"
     },
     {
         id: 50,
         name: "Santosh Bishwakarma - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Santosh Bishwakarma/Untitled_Artwork 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Santosh Bishwakarma/Untitled_Artwork 2.jpg",
         martyr: "Santosh Bishwakarma",
         description: "Stencil artwork of Santosh Bishwakarma"
     },
     {
         id: 51,
         name: "Santosh Bishwakarma - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Santosh Bishwakarma/Untitled_Artwork 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Santosh Bishwakarma/Untitled_Artwork 3.jpg",
         martyr: "Santosh Bishwakarma",
         description: "Stencil artwork of Santosh Bishwakarma"
     },
@@ -608,21 +608,21 @@ const stencilsData = [
     {
         id: 52,
         name: "Sauron Kishor Shrestha - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Sauron Kishor Shrestha/Sauron_Kishor_Shrestha.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sauron Kishor Shrestha/Sauron_Kishor_Shrestha.jpg",
         martyr: "Sauron Kishor Shrestha",
         description: "Stencil artwork of Sauron Kishor Shrestha"
     },
     {
         id: 53,
         name: "Sauron Kishor Shrestha - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Sauron Kishor Shrestha/Sauron_Kishor_Shrestha 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sauron Kishor Shrestha/Sauron_Kishor_Shrestha 2.jpg",
         martyr: "Sauron Kishor Shrestha",
         description: "Stencil artwork of Sauron Kishor Shrestha"
     },
     {
         id: 54,
         name: "Sauron Kishor Shrestha - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Sauron Kishor Shrestha/Sauron_Kishor_Shrestha 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sauron Kishor Shrestha/Sauron_Kishor_Shrestha 3.jpg",
         martyr: "Sauron Kishor Shrestha",
         description: "Stencil artwork of Sauron Kishor Shrestha"
     },
@@ -630,21 +630,21 @@ const stencilsData = [
     {
         id: 55,
         name: "Shri Krishna Shrestha - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Shri Krishna Shrestha/Shri_Krishna_Shrestha.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shri Krishna Shrestha/Shri_Krishna_Shrestha.jpg",
         martyr: "Shri Krishna Shrestha",
         description: "Stencil artwork of Shri Krishna Shrestha"
     },
     {
         id: 56,
         name: "Shri Krishna Shrestha - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Shri Krishna Shrestha/Shri_Krishna_Shrestha 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shri Krishna Shrestha/Shri_Krishna_Shrestha 2.jpg",
         martyr: "Shri Krishna Shrestha",
         description: "Stencil artwork of Shri Krishna Shrestha"
     },
     {
         id: 57,
         name: "Shri Krishna Shrestha - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Shri Krishna Shrestha/Shri_Krishna_Shrestha 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shri Krishna Shrestha/Shri_Krishna_Shrestha 3.jpg",
         martyr: "Shri Krishna Shrestha",
         description: "Stencil artwork of Shri Krishna Shrestha"
     },
@@ -652,14 +652,14 @@ const stencilsData = [
     {
         id: 58,
         name: "Shriyam - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Shriyam layers/Untitled_Artwork 7.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shriyam layers/Untitled_Artwork 7.jpg",
         martyr: "Shriyam",
         description: "Stencil artwork of Shriyam"
     },
     {
         id: 59,
         name: "Shriyam - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Shriyam layers/Untitled_Artwork 9.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shriyam layers/Untitled_Artwork 9.jpg",
         martyr: "Shriyam",
         description: "Stencil artwork of Shriyam"
     },
@@ -667,28 +667,28 @@ const stencilsData = [
     {
         id: 60,
         name: "Subash Bohara - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Subash Bohara/Untitled_Artwork.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Subash Bohara/Untitled_Artwork.jpg",
         martyr: "Subash Bohara",
         description: "Stencil artwork of Subash Bohara"
     },
     {
         id: 61,
         name: "Subash Bohara - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Subash Bohara/Untitled_Artwork 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Subash Bohara/Untitled_Artwork 2.jpg",
         martyr: "Subash Bohara",
         description: "Stencil artwork of Subash Bohara"
     },
     {
         id: 62,
         name: "Subash Bohara - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Subash Bohara/Untitled_Artwork 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Subash Bohara/Untitled_Artwork 3.jpg",
         martyr: "Subash Bohara",
         description: "Stencil artwork of Subash Bohara"
     },
     {
         id: 63,
         name: "Subash Bohara - Artwork 4",
-        image: "s3://nepalgenz/Stencils/Subash Bohara/Untitled_Artwork 4.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Subash Bohara/Untitled_Artwork 4.jpg",
         martyr: "Subash Bohara",
         description: "Stencil artwork of Subash Bohara"
     },
@@ -696,21 +696,21 @@ const stencilsData = [
     {
         id: 64,
         name: "Sulav Raj Shrestha - Artwork 1",
-        image: "s3://nepalgenz/Stencils/Sulav Raj Shrestha/Sulav_Raj_Shrestha.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sulav Raj Shrestha/Sulav_Raj_Shrestha.jpg",
         martyr: "Sulav Raj Shrestha",
         description: "Stencil artwork of Sulav Raj Shrestha"
     },
     {
         id: 65,
         name: "Sulav Raj Shrestha - Artwork 2",
-        image: "s3://nepalgenz/Stencils/Sulav Raj Shrestha/Sulav_Raj_Shrestha 2.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sulav Raj Shrestha/Sulav_Raj_Shrestha 2.jpg",
         martyr: "Sulav Raj Shrestha",
         description: "Stencil artwork of Sulav Raj Shrestha"
     },
     {
         id: 66,
         name: "Sulav Raj Shrestha - Artwork 3",
-        image: "s3://nepalgenz/Stencils/Sulav Raj Shrestha/Sulav_Raj_Shrestha 3.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sulav Raj Shrestha/Sulav_Raj_Shrestha 3.jpg",
         martyr: "Sulav Raj Shrestha",
         description: "Stencil artwork of Sulav Raj Shrestha"
     },
@@ -718,21 +718,21 @@ const stencilsData = [
     {
         id: 67,
         name: "Info Stencil",
-        image: "s3://nepalgenz/Stencils/Info.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Info.jpg",
         martyr: "General",
         description: "Information stencil artwork"
     },
     {
         id: 68,
         name: "Text Grey Stencil",
-        image: "s3://nepalgenz/Stencils/Text grey.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Text grey.jpg",
         martyr: "General",
         description: "Grey text stencil artwork"
     },
     {
         id: 69,
         name: "Text Red Stencil",
-        image: "s3://nepalgenz/Stencils/Text red.jpg",
+        image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Text red.jpg",
         martyr: "General",
         description: "Red text stencil artwork"
     }
