@@ -2829,3 +2829,208 @@ body::before {
         padding: var(--spacing-md);
     }
 }
+
+/* Media Section Styles */
+.media-section {
+    padding: 4rem 0;
+    background: var(--nepal-white-soft);
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.media-item {
+    background: var(--nepal-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background: var(--nepal-gray-100);
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px 8px 0 0;
+}
+
+.media-info {
+    padding: 1.5rem;
+}
+
+.media-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--nepal-gray-800);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.media-source {
+    font-size: 0.9rem;
+    color: var(--nepal-red);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.media-description {
+    font-size: 0.95rem;
+    color: var(--nepal-gray-600);
+    line-height: 1.5;
+}
+
+.media-note {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--nepal-red-pale);
+    border-left: 4px solid var(--nepal-red);
+    border-radius: 8px;
+}
+
+.media-note p {
+    color: var(--nepal-gray-700);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Media Section */
+@media (max-width: 768px) {
+    .media-section {
+        padding: 2rem 0;
+    }
+    
+    .media-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .media-item {
+        margin: 0 0.5rem;
+        border-radius: 8px;
+    }
+    
+    .video-container {
+        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .video-container iframe {
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .media-info {
+        padding: 1rem;
+    }
+    
+    .media-info h3 {
+        font-size: 1rem;
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
+    }
+    
+    .media-source {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .media-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .media-note {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+    
+    .media-note p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile-specific video optimizations */
+@media (max-width: 480px) {
+    .media-section {
+        padding: 1.5rem 0;
+    }
+    
+    .media-grid {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .media-item {
+        margin: 0 0.25rem;
+    }
+    
+    .video-container {
+        padding-bottom: 56.25%;
+    }
+    
+    .media-info {
+        padding: 0.75rem;
+    }
+    
+    .media-info h3 {
+        font-size: 0.95rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+    
+    .media-source {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .media-description {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+    
+    .media-note {
+        margin-top: 1.5rem;
+        padding: 0.75rem;
+    }
+    
+    .media-note p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+/* Touch-friendly video controls */
+@media (hover: none) and (pointer: coarse) {
+    .video-container iframe {
+        /* Ensure touch controls work properly on mobile */
+        touch-action: manipulation;
+    }
+    
+    .media-item:hover {
+        /* Disable hover effects on touch devices */
+        transform: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
