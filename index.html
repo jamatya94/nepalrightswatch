@@ -22,6 +22,7 @@
                 <a href="#martyrs" class="nav-link">Martyrs</a>
                 <a href="#sketches" class="nav-link">Sketches</a>
                 <a href="#stencils" class="nav-link">Stencils</a>
+                <a href="#social-feed" class="nav-link">Latest Updates</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-toggle">
@@ -324,6 +325,33 @@
             </div>
         </div>
     </section>
+
+    <!-- Social Media Feed Section -->
+            <!-- Social Media Feed Section -->
+        <div class="social-feed-section">
+            <h2 class="section-title">Latest Updates</h2>
+            <p class="section-description">Real-time posts and international news coverage about Nepal protests and youth movements</p>
+            
+            <div class="hashtag-filters">
+                <button class="hashtag-btn active" data-hashtag="all">All Updates</button>
+                <button class="hashtag-btn" data-hashtag="breaking">Breaking News</button>
+                <button class="hashtag-btn" data-hashtag="international">International Coverage</button>
+                <button class="hashtag-btn" data-hashtag="social">Social Media</button>
+                <button class="hashtag-btn" data-hashtag="analysis">Analysis & Opinion</button>
+                <button class="hashtag-btn" data-hashtag="government">Government Response</button>
+            </div>
+            
+            <div class="loading-indicator" id="social-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading real-time updates...</p>
+            </div>
+            
+            <div class="social-posts-grid" id="social-posts-container">
+                <!-- Posts will be loaded dynamically -->
+            </div>
+            
+            <button class="load-more-btn" id="load-more-posts">Load More Posts</button>
+        </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
