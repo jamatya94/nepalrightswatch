@@ -349,38 +349,6 @@ body {
     background: var(--nepal-white);
 }
 
-.search-container {
-    position: relative;
-    max-width: 500px;
-    margin: 0 auto var(--spacing-3xl);
-}
-
-.search-input {
-    width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg) var(--spacing-md) 3rem;
-    border: 2px solid var(--gray-300);
-    border-radius: 50px;
-    font-size: var(--font-size-lg);
-    transition: all 0.3s ease;
-    background: var(--nepal-white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.search-input:focus {
-    outline: none;
-    border-color: var(--nepal-red);
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
-    transform: translateY(-1px);
-}
-
-.search-icon {
-    position: absolute;
-    left: var(--spacing-lg);
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--gray-600);
-}
-
 .martyrs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
