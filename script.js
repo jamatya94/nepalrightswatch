@@ -26,7 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close menu when clicking on links
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
+            // Check if it's an external link (not starting with #)
+            if (!link.getAttribute('href').startsWith('#')) {
+                // Allow external links to work normally
+                return;
+            }
+            
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
             
@@ -519,10 +525,17 @@ function initializeNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Check if it's an external link (not starting with #)
+            if (!href.startsWith('#')) {
+                // Allow external links to work normally
+                return;
+            }
+            
             e.preventDefault();
             
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            const targetSection = document.querySelector(href);
             
             if (targetSection) {
                 targetSection.scrollIntoView({

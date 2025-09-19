@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victim Information Form - Nepal Gen Z Memorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .form-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--nepal-white);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--nepal-red-pale);
+        }
+        
+        .form-header h1 {
+            color: var(--nepal-red);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-header p {
+            color: var(--nepal-gray-600);
+            font-size: 1.1rem;
+        }
+        
+        .return-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--nepal-red);
+            color: var(--nepal-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .return-link:hover {
+            background: var(--nepal-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+        }
+        
+        .form-iframe {
+            width: 100%;
+            height: 2000px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-note {
+            background: var(--nepal-red-pale);
+            border-left: 4px solid var(--nepal-red);
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .form-note p {
+            color: var(--nepal-gray-700);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            
+            .form-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .form-iframe {
+                height: 1800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="flag-emoji">🇳🇵</span>
+                <span class="logo-text">Nepal's Democratic Revolution</span>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#martyrs" class="nav-link">Martyrs</a>
+                <a href="index.html#sketches" class="nav-link">Sketches</a>
+                <a href="index.html#stencils" class="nav-link">Stencils</a>
+                <a href="index.html#media" class="nav-link">Media</a>
+                <a href="index.html#social-feed" class="nav-link">Latest Updates</a>
+                <a href="victim-form.html" class="nav-link">Victim Information Form</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: 100px; background: var(--nepal-gray-50); min-height: 100vh;">
+        <div class="container">
+            <a href="index.html" class="return-link">
+                <i class="fas fa-arrow-left"></i>
+                Return to Memorial Homepage
+            </a>
+            
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Victim Information Form</h1>
+                    <p>Help us compile a verified record of individuals affected by the Nepal Gen-Z Movement</p>
+                </div>
+                
+                <div class="form-note">
+                    <p><strong>Purpose:</strong> We are compiling a verified record of individuals killed, injured, hospitalized, or missing during the Nepal Gen-Z Movement to honor their lives, support families, and pursue truth, accountability, and justice.</p>
+                </div>
+                
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSefPj7YbpUnBCgXHayudj1WTDpuKZKB2Hk3Zy8hJjWODulu0g/viewform?embedded=true" 
+                    class="form-iframe"
+                    title="Nepal Gen-Z Movement Victim Information Form">
+                </iframe>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🇳🇵 Nepal's Democratic Revolution</h3>
+                    <p>Honoring the brave hearts who stood for justice and democracy.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#martyrs">Martyrs</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nepal's Democratic Revolution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
