@@ -6,11 +6,32 @@
 }
 
 :root {
-    /* Nepal Flag Colors - Enhanced for better contrast */
+    /* Nepal Flag Colors - Enhanced Palette */
     --nepal-red: #DC2626;
+    --nepal-red-dark: #B91C1C;
+    --nepal-red-darker: #991B1B;
+    --nepal-red-light: #EF4444;
+    --nepal-red-lighter: #FCA5A5;
+    --nepal-red-pale: #FEE2E2;
+    --nepal-red-transparent: rgba(220, 38, 38, 0.1);
+    --nepal-red-hover: rgba(220, 38, 38, 0.9);
+    
     --nepal-blue: #1E3A8A;
+    --nepal-blue-dark: #1E40AF;
+    --nepal-blue-light: #3B82F6;
+    --nepal-blue-pale: #DBEAFE;
+    --nepal-blue-transparent: rgba(30, 58, 138, 0.1);
+    
     --nepal-white: #FFFFFF;
+    --nepal-white-soft: #FEFEFE;
+    --nepal-white-cream: #FEFAF7;
     --nepal-gold: #F59E0B;
+    --nepal-gold-light: #FCD34D;
+    
+    /* Enhanced Gradients */
+    --nepal-gradient: linear-gradient(135deg, var(--nepal-red) 0%, var(--nepal-red-dark) 50%, var(--nepal-blue) 100%);
+    --nepal-gradient-subtle: linear-gradient(135deg, var(--nepal-red-pale) 0%, var(--nepal-white) 50%, var(--nepal-blue-pale) 100%);
+    --nepal-red-gradient: linear-gradient(135deg, var(--nepal-red-light) 0%, var(--nepal-red) 50%, var(--nepal-red-dark) 100%);
     
     /* Additional Colors - Improved contrast */
     --dark-red: #991B1B;
@@ -55,27 +76,60 @@
     --spacing-2xl: 3rem;
     --spacing-3xl: 4rem;
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    /* Shadows - Nepal themed */
+    --shadow-sm: 0 1px 2px 0 rgba(220, 38, 38, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(220, 38, 38, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(220, 38, 38, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(220, 38, 38, 0.1);
+    --shadow-nepal: 0 8px 25px rgba(220, 38, 38, 0.15);
+    
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
 }
 
 body {
     font-family: var(--font-primary);
     line-height: 1.7;
     color: var(--gray-800);
-    background-color: var(--nepal-white);
+    background: var(--nepal-gradient-subtle);
+    background-attachment: fixed;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Nepal-inspired background pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 20%, var(--nepal-red-transparent) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, var(--nepal-blue-transparent) 0%, transparent 50%);
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    position: relative;
 }
 
 /* Navigation */
@@ -83,12 +137,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(15px);
-    border-bottom: 2px solid var(--gray-200);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 3px solid var(--nepal-red);
+    box-shadow: var(--shadow-nepal);
     z-index: 1000;
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-normal);
 }
 
 .nav-container {
@@ -107,50 +161,100 @@ body {
     gap: var(--spacing-sm);
 }
 
-.flag-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 4px;
+.flag-emoji {
+    font-size: 32px;
+    line-height: 1;
+    filter: drop-shadow(0 3px 6px rgba(220, 38, 38, 0.3));
+    transition: var(--transition-normal);
+    cursor: pointer;
+}
+
+.flag-emoji:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 5px 10px rgba(220, 38, 38, 0.4));
 }
 
 .logo-text {
     font-size: var(--font-size-lg);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--nepal-red);
+    letter-spacing: -0.025em;
+    transition: var(--transition-normal);
+}
+
+.logo-text:hover {
+    color: var(--nepal-red-dark);
 }
 
 .nav-menu {
     display: flex;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+/* Mobile menu toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+}
+
+.nav-toggle:hover {
+    background: var(--nepal-red-transparent);
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--nepal-red);
+    margin: 2px 0;
+    border-radius: var(--radius-full);
+    transition: var(--transition-fast);
 }
 
 .nav-link {
     text-decoration: none;
     color: var(--gray-700);
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: var(--transition-normal);
     position: relative;
     padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 6px;
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
 }
 
 .nav-link:hover {
     color: var(--nepal-red);
+    background: var(--nepal-red-pale);
+    border-color: var(--nepal-red-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.nav-link.active {
+    color: var(--nepal-white);
+    background: var(--nepal-red);
+    border-color: var(--nepal-red-dark);
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
-    height: 2px;
-    background: var(--nepal-red);
-    transition: width 0.3s ease;
+    height: 3px;
+    background: var(--nepal-gradient);
+    border-radius: var(--radius-full);
+    transition: var(--transition-normal);
 }
 
 .nav-link:hover::after {
-    width: 100%;
+    width: 80%;
 }
 
 .nav-toggle {
@@ -167,15 +271,749 @@ body {
     transition: 0.3s;
 }
 
+/* ============================================
+   MOBILE RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet and smaller desktop */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .hero-content h1 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
+
+/* ============================================
+   BUTTON STYLES - NEPAL THEME
+   ============================================ */
+
+/* Base Button Styles */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition-slow);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Primary Button - Nepal Red */
+.btn-primary {
+    background: var(--nepal-red-gradient);
+    color: var(--nepal-white);
+    border-color: var(--nepal-red-dark);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    background: var(--nepal-red-dark);
+    border-color: var(--nepal-red-darker);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Secondary Button - Nepal Blue */
+.btn-secondary {
+    background: var(--nepal-blue);
+    color: var(--nepal-white);
+    border-color: var(--nepal-blue-dark);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover {
+    background: var(--nepal-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Outline Button */
+.btn-outline {
+    background: transparent;
+    color: var(--nepal-red);
+    border-color: var(--nepal-red);
+}
+
+.btn-outline:hover {
+    background: var(--nepal-red);
+    color: var(--nepal-white);
+    box-shadow: var(--shadow-md);
+}
+
+/* Ghost Button */
+.btn-ghost {
+    background: var(--nepal-red-pale);
+    color: var(--nepal-red-dark);
+    border-color: var(--nepal-red-light);
+}
+
+.btn-ghost:hover {
+    background: var(--nepal-red-light);
+    color: var(--nepal-white);
+    border-color: var(--nepal-red);
+}
+
+/* Small Button */
+.btn-sm {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    min-height: 36px;
+    min-width: 36px;
+}
+
+/* Large Button */
+.btn-lg {
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    font-size: var(--font-size-lg);
+    min-height: 52px;
+}
+
+/* Filter Buttons */
+.filter-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    background: var(--nepal-white);
+    color: var(--nepal-red);
+    border: 2px solid var(--nepal-red-light);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    min-height: 40px;
+}
+
+.filter-btn:hover {
+    background: var(--nepal-red-pale);
+    border-color: var(--nepal-red);
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background: var(--nepal-red);
+    color: var(--nepal-white);
+    border-color: var(--nepal-red-dark);
+    box-shadow: var(--shadow-md);
+}
+
+/* Disabled Button */
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Button Group */
+.btn-group {
+    display: inline-flex;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-group .btn {
+    border-radius: 0;
+    border-right-width: 1px;
+}
+
+.btn-group .btn:first-child {
+    border-top-left-radius: var(--radius-lg);
+    border-bottom-left-radius: var(--radius-lg);
+}
+
+.btn-group .btn:last-child {
+    border-top-right-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+    border-right-width: 2px;
+}
+
+/* Icon Buttons */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.btn-icon i {
+    font-size: 1.1em;
+}
+
+/* Floating Action Button */
+.btn-fab {
+    position: fixed;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--nepal-red-gradient);
+    color: var(--nepal-white);
+    border: none;
+    box-shadow: var(--shadow-xl);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    z-index: 100;
+}
+
+.btn-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 28px rgba(220, 38, 38, 0.3);
+}
+
+/* ============================================
+   FORM STYLES - NEPAL THEME
+   ============================================ */
+
+/* Form Container */
+.form-container {
+    background: var(--nepal-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-nepal);
+    border: 1px solid var(--nepal-red-pale);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--nepal-gradient);
+}
+
+/* Input Fields */
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    color: var(--gray-800);
+    background: var(--nepal-white);
+    border: 2px solid var(--nepal-red-pale);
+    border-radius: var(--radius-md);
+    transition: var(--transition-normal);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--nepal-red);
+    box-shadow: 0 0 0 3px var(--nepal-red-transparent);
+    transform: translateY(-1px);
+}
+
+.form-input:hover,
+.form-textarea:hover,
+.form-select:hover {
+    border-color: var(--nepal-red-light);
+}
+
+/* Input Labels */
+.form-label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    color: var(--nepal-red-dark);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-label.required::after {
+    content: ' *';
+    color: var(--nepal-red);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+/* Floating Labels */
+.form-floating {
+    position: relative;
+}
+
+.form-floating .form-input {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-sm);
+}
+
+.form-floating .form-label {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-lg);
+    color: var(--gray-500);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    transition: var(--transition-normal);
+    pointer-events: none;
+    background: var(--nepal-white);
+    padding: 0 var(--spacing-xs);
+}
+
+.form-floating .form-input:focus ~ .form-label,
+.form-floating .form-input:not(:placeholder-shown) ~ .form-label {
+    top: -8px;
+    font-size: var(--font-size-xs);
+    color: var(--nepal-red);
+    font-weight: 600;
+}
+
+/* Checkbox and Radio Styles */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    cursor: pointer;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-right: var(--spacing-sm);
+    cursor: pointer;
+    accent-color: var(--nepal-red);
+}
+
+.form-check-label {
+    font-size: var(--font-size-base);
+    color: var(--gray-700);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Form Validation */
+.form-input.invalid,
+.form-textarea.invalid,
+.form-select.invalid {
+    border-color: var(--error-red);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-input.valid,
+.form-textarea.valid,
+.form-select.valid {
+    border-color: var(--success-green);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.form-error {
+    color: var(--error-red);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.form-success {
+    color: var(--success-green);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* Search Input */
+.search-input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.search-input .form-input {
+    padding-left: var(--spacing-2xl);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23DC2626'%3e%3ccircle cx='11' cy='11' r='8'/%3e%3cpath d='m21 21-4.35-4.35'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: var(--spacing-sm) center;
+    background-size: 20px;
+}
+
+/* ============================================
+   END FORM STYLES
+   ============================================ */
+
+/* ============================================
+   END BUTTON STYLES
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 768px) {
+    /* Navigation - Mobile */
+    .nav-container {
+        padding: 0 var(--spacing-md);
+        position: relative;
+    }
+    
+    .nav-toggle {
+        display: flex !important;
+        z-index: 1001;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--nepal-white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left var(--transition-normal);
+        box-shadow: var(--shadow-xl);
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        font-size: var(--font-size-xl);
+        margin: var(--spacing-lg) 0;
+        padding: var(--spacing-lg) var(--spacing-xl);
+        width: 200px;
+        text-align: center;
+        background: var(--nepal-red-pale);
+        border: 2px solid var(--nepal-red-light);
+        border-radius: var(--radius-lg);
+    }
+    
+    .nav-link:hover {
+        background: var(--nepal-red);
+        color: var(--nepal-white);
+        transform: scale(1.05);
+    }
+    
+    /* Hero Section - Mobile */
+    .hero {
+        min-height: 100vh;
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .hero-content {
+        text-align: center;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero-content h1 {
+        font-size: var(--font-size-3xl);
+        line-height: 1.2;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-content p {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    /* Stats Grid - Mobile */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        margin: var(--spacing-xl) 0;
+    }
+    
+    .stat-card {
+        padding: var(--spacing-lg);
+        min-height: 120px;
+    }
+    
+    .stat-number {
+        font-size: var(--font-size-2xl);
+    }
+    
+    /* Cards and Grids - Mobile */
+    .martyrs-grid,
+    .sketches-grid,
+    .stencils-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .breaking-news .news-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* Typography - Mobile */
+    .section-title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    /* Buttons - Mobile friendly */
+    .btn {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: var(--font-size-base);
+        min-height: 44px; /* Touch-friendly */
+        min-width: 44px;
+    }
+    
+    .btn-primary {
+        padding: var(--spacing-lg) var(--spacing-2xl);
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-sm);
+        height: 60px;
+    }
+    
+    .flag-emoji {
+        font-size: 24px;
+    }
+    
+    .logo-text {
+        font-size: var(--font-size-base);
+        display: none; /* Hide text on very small screens */
+    }
+    
+    .hero-content h1 {
+        font-size: var(--font-size-2xl);
+        line-height: 1.3;
+    }
+    
+    .hero-content p {
+        font-size: var(--font-size-base);
+    }
+    
+    .stats-grid {
+        gap: var(--spacing-sm);
+    }
+    
+    .stat-card {
+        padding: var(--spacing-md);
+        min-height: 100px;
+    }
+    
+    .martyrs-grid,
+    .sketches-grid,
+    .stencils-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .martyr-card,
+    .sketch-card,
+    .stencil-card {
+        margin-bottom: var(--spacing-md);
+        cursor: pointer;
+        /* Improve touch target */
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Social feed - Mobile */
+    .social-filters {
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm);
+        min-height: 44px; /* Improved touch target */
+        min-width: 80px;
+        border-radius: var(--radius-full);
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-card {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        /* Better touch interaction */
+        transition: var(--transition-normal);
+    }
+    
+    .post-card:active {
+        transform: scale(0.98);
+        box-shadow: var(--shadow-sm);
+    }
+    
+    /* Forms - Mobile optimized */
+    .form-input,
+    .form-textarea,
+    .form-select {
+        min-height: 48px; /* Better touch target */
+        font-size: 16px; /* Prevent zoom on iOS */
+        padding: var(--spacing-md);
+    }
+    
+    .form-container {
+        padding: var(--spacing-lg);
+        margin: var(--spacing-sm);
+    }
+    
+    /* Buttons - Mobile optimized */
+    .btn {
+        min-height: 48px;
+        min-width: 48px;
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-base);
+        border-radius: var(--radius-lg);
+        /* Better tap feedback */
+        -webkit-tap-highlight-color: rgba(220, 38, 38, 0.2);
+    }
+    
+    .btn:active {
+        transform: scale(0.96);
+    }
+    
+    /* Floating action button - Mobile */
+    .btn-fab {
+        bottom: var(--spacing-lg);
+        right: var(--spacing-lg);
+        width: 60px;
+        height: 60px;
+        box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4);
+    }
+    
+    /* Accessibility improvements */
+    .nav-link,
+    .btn,
+    .filter-btn,
+    .martyr-card,
+    .sketch-card,
+    .stencil-card {
+        -webkit-tap-highlight-color: rgba(220, 38, 38, 0.2);
+        touch-action: manipulation;
+    }
+    
+    /* Improved scrolling */
+    body {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    
+    /* Modal improvements for mobile */
+    .image-modal {
+        padding: var(--spacing-sm);
+    }
+    
+    .modal-content {
+        max-width: 95vw;
+        max-height: 95vh;
+        border-radius: var(--radius-lg);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Text selection improvements */
+    * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    p, h1, h2, h3, h4, h5, h6, span {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+    }
+}
+
+/* ============================================
+   END MOBILE RESPONSIVE DESIGN
+   ============================================ */
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--nepal-red) 0%, var(--dark-red) 50%, var(--nepal-blue) 100%);
+    background: var(--nepal-gradient);
     color: var(--nepal-white);
     padding: var(--spacing-3xl) 0;
-    margin-top: 70px;
+    margin-top: 80px;
     position: relative;
     overflow: hidden;
 }
@@ -187,7 +1025,23 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="nepalgrain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23nepalgrain)"/></svg>');
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* Nepal flag inspired pattern overlay */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.05) 50%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, rgba(255,255,255,0.05) 50%, transparent 51%);
+    background-size: 40px 40px;
     opacity: 0.3;
     pointer-events: none;
 }
