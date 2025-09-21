@@ -163,8 +163,17 @@
                     
                     img.onerror = function() {
                         console.error('Failed to load S3 image:', stencil.image);
-                        placeholder.style.display = 'flex';
-                        placeholder.innerHTML = `${stencil.martyr || stencil.name}<br><small style="font-size: 12px;">Image unavailable</small>`;
+                        // Try fallback image if available
+                        if (stencil.fallbackImage) {
+                            img.src = stencil.fallbackImage;
+                            img.onerror = function() {
+                                placeholder.style.display = 'flex';
+                                placeholder.innerHTML = `${stencil.martyr || stencil.name}<br><small style="font-size: 12px;">Image unavailable</small>`;
+                            };
+                        } else {
+                            placeholder.style.display = 'flex';
+                            placeholder.innerHTML = `${stencil.martyr || stencil.name}<br><small style="font-size: 12px;">Image unavailable</small>`;
+                        }
                     };
                     
                     imageContainer.appendChild(img);
