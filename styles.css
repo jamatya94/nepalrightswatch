@@ -3321,3 +3321,648 @@ body::before {
         padding: 0.875rem 1rem;
     }
 }
+
+/* ============================================
+   GET JUSTICE SECTION STYLES
+   ============================================ */
+
+.justice-section {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(135deg, 
+        var(--nepal-white) 0%, 
+        #FEF2F2 15%, 
+        #FEF7FF 30%, 
+        #F0F9FF 45%, 
+        #F0FDF4 60%, 
+        #FFFBEB 75%, 
+        var(--gray-50) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.justice-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="justice-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23DC2626" opacity="0.1"/><circle cx="5" cy="45" r="0.5" fill="%231E3A8A" opacity="0.1"/><circle cx="45" cy="5" r="0.5" fill="%23F59E0B" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23justice-pattern)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.justice-section .section-description {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-3xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Justice Hero */
+.justice-hero {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(135deg, var(--nepal-red), var(--nepal-blue));
+    border-radius: var(--radius-xl);
+    color: var(--nepal-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.justice-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="justice-hero-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23justice-hero-pattern)"/></svg>');
+    pointer-events: none;
+}
+
+.justice-motto {
+    position: relative;
+    z-index: 2;
+}
+
+.justice-motto h3 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.justice-motto .nepali-text {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    opacity: 0.9;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Accordion Section */
+.accordion-section {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.accordion-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--nepal-red);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.accordion-subtitle {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.accordion-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: var(--nepal-white);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.accordion-header {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: linear-gradient(135deg, var(--nepal-red-pale), var(--nepal-white));
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.accordion-header:hover {
+    background: linear-gradient(135deg, var(--nepal-red-light), var(--nepal-white));
+    border-bottom-color: var(--nepal-red);
+}
+
+.accordion-header h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--nepal-red-dark);
+    margin: 0;
+    flex: 1;
+}
+
+.accordion-icon {
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+    color: var(--nepal-red);
+    transition: transform 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--nepal-white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1000px;
+}
+
+.accordion-details {
+    padding: var(--spacing-xl);
+    background: var(--nepal-white);
+}
+
+.detail-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--nepal-red);
+    margin-bottom: var(--spacing-sm);
+}
+
+.detail-section p {
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.filing-note {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--nepal-blue-pale);
+    border-left: 4px solid var(--nepal-blue);
+    border-radius: var(--radius-md);
+}
+
+.filing-note p {
+    color: var(--gray-700);
+    margin: 0;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+/* Process Section */
+.process-section {
+    margin-bottom: var(--spacing-3xl);
+    text-align: center;
+}
+
+.process-section h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--nepal-red);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-step {
+    background: var(--nepal-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--nepal-red), var(--nepal-blue));
+}
+
+.process-step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--nepal-red), var(--nepal-blue));
+    color: var(--nepal-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin: 0 auto var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.step-content h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--nepal-red-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.step-content p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+/* Memorial Section */
+.memorial-section {
+    margin-bottom: var(--spacing-3xl);
+    background: var(--nepal-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.memorial-section h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--nepal-red);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.memorial-content h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--nepal-blue);
+    margin-bottom: var(--spacing-lg);
+}
+
+.methodology-section h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--nepal-red-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.methodology-section p {
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.verification-levels,
+.ethics-protection,
+.contribute-section {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--nepal-red-light);
+}
+
+.verification-levels h6,
+.ethics-protection h6,
+.contribute-section h6 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--nepal-red);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Accountability Section */
+.accountability-section {
+    margin-bottom: var(--spacing-3xl);
+    background: var(--nepal-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.accountability-section h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--nepal-red);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.tracker-content p {
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.tracker-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+}
+
+.tracker-list li {
+    padding: var(--spacing-sm) 0;
+    color: var(--gray-700);
+    position: relative;
+    padding-left: var(--spacing-xl);
+}
+
+.tracker-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--nepal-red);
+    font-weight: bold;
+    font-size: var(--font-size-lg);
+}
+
+/* Push Strategies */
+.push-strategies {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.strategy-section {
+    background: var(--nepal-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--nepal-red);
+}
+
+.strategy-section h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--nepal-red-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.strategy-section ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0;
+}
+
+.strategy-section li {
+    padding: var(--spacing-sm) 0;
+    color: var(--gray-700);
+    position: relative;
+    padding-left: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.strategy-section li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--nepal-red);
+    font-weight: bold;
+}
+
+.strategy-section p {
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.civil-society-letter {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+/* Join Section */
+.join-section {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    background: linear-gradient(135deg, var(--nepal-red-pale), var(--nepal-blue-pale));
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+}
+
+.join-section h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--nepal-red-dark);
+    margin-bottom: var(--spacing-xl);
+}
+
+.join-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+/* Victim Support Section */
+.victim-support-section {
+    margin-bottom: var(--spacing-3xl);
+    background: var(--nepal-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    text-align: center;
+}
+
+.victim-support-section h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--nepal-red);
+    margin-bottom: var(--spacing-lg);
+}
+
+.support-content p {
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.support-contact {
+    margin-top: var(--spacing-lg);
+}
+
+/* Partner Section */
+.partner-section {
+    text-align: center;
+    background: var(--nepal-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.partner-section h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--nepal-red);
+    margin-bottom: var(--spacing-md);
+}
+
+.partner-content p {
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Responsive Design for Justice Section */
+@media (max-width: 768px) {
+    .justice-section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .justice-motto h3 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .justice-motto .nepali-text {
+        font-size: var(--font-size-xl);
+    }
+    
+    .accordion-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .accordion-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .accordion-header {
+        padding: var(--spacing-md);
+    }
+    
+    .accordion-header h4 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .accordion-details {
+        padding: var(--spacing-lg);
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .process-step {
+        padding: var(--spacing-lg);
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .join-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .join-actions .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .memorial-section,
+    .accountability-section,
+    .victim-support-section,
+    .partner-section {
+        padding: var(--spacing-lg);
+    }
+    
+    .strategy-section {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .justice-motto h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .justice-motto .nepali-text {
+        font-size: var(--font-size-lg);
+    }
+    
+    .accordion-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .accordion-header h4 {
+        font-size: var(--font-size-base);
+    }
+    
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-xl);
+    }
+    
+    .memorial-section h3,
+    .accountability-section h3,
+    .victim-support-section h3,
+    .partner-section h3 {
+        font-size: var(--font-size-xl);
+    }
+}

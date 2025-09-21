@@ -2262,4 +2262,30 @@ class ContactForm {
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize contact form
     new ContactForm();
+    
+    // Initialize accordion functionality for Get Justice section
+    initializeAccordion();
 });
+
+// Accordion functionality for Get Justice section
+function initializeAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        
+        if (header) {
+            header.addEventListener('click', function() {
+                // Close all other accordion items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        }
+    });
+}
