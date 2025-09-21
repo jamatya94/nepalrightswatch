@@ -2363,6 +2363,19 @@ body::before {
     margin-top: var(--spacing-2xl);
 }
 
+/* Stencil-specific square layout */
+#stencils-grid .gallery-image-container {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+}
+
+#stencils-grid .gallery-card {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .gallery-card {
     background: var(--nepal-white);
     border-radius: 16px;
@@ -2387,6 +2400,7 @@ body::before {
     width: 100%;
     height: 250px;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
 }
 
 .gallery-image {
@@ -2544,6 +2558,12 @@ body::before {
     
     .gallery-image-container {
         height: 200px;
+        aspect-ratio: 1 / 1;
+    }
+    
+    #stencils-grid .gallery-image-container {
+        aspect-ratio: 1 / 1;
+        height: auto;
     }
     
     .modal-content {
@@ -2564,6 +2584,12 @@ body::before {
     
     .gallery-image-container {
         height: 180px;
+        aspect-ratio: 1 / 1;
+    }
+    
+    #stencils-grid .gallery-image-container {
+        aspect-ratio: 1 / 1;
+        height: auto;
     }
     
     .section-subtitle {
