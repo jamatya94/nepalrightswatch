@@ -310,6 +310,61 @@ const sketchesData = [
     }
 ];
 
+// Martyrs stories and bios data
+const martyrsStories = {
+    "Abhishek Shrestha": {
+        name: "Abhishek Shrestha",
+        age: 22,
+        location: "Kathmandu",
+        occupation: "Student",
+        story: "Abhishek was a passionate student activist who believed in democratic rights and social justice. He was known for his peaceful approach to protests and his dedication to helping fellow students understand their rights. On the day of the protests, he was leading a group of students in peaceful demonstrations when he was tragically killed by security forces.",
+        bio: "Born in Kathmandu, Abhishek was pursuing his Bachelor's degree in Political Science. He was an active member of the student union and organized several awareness campaigns about democratic rights. His friends remember him as someone who always stood up for the underprivileged and believed in peaceful change.",
+        family: "Survived by his parents and younger sister",
+        impact: "His death became a symbol of the youth movement's struggle for democracy and justice."
+    },
+    "Ayush Thapa": {
+        name: "Ayush Thapa",
+        age: 24,
+        location: "Pokhara",
+        occupation: "Software Developer",
+        story: "Ayush was a young software developer who used his technical skills to help organize peaceful protests through social media and digital platforms. He created several apps and websites to help coordinate the youth movement and spread awareness about democratic rights.",
+        bio: "A graduate in Computer Science, Ayush was passionate about using technology for social good. He volunteered his time to help local NGOs with their digital presence and was known for his innovative solutions to community problems.",
+        family: "Survived by his parents and elder brother",
+        impact: "His technical contributions helped the movement reach thousands of young people across Nepal."
+    },
+    "Bijay Chaudhary": {
+        name: "Bijay Chaudhary",
+        age: 21,
+        location: "Chitwan",
+        occupation: "Student",
+        story: "Bijay was a dedicated student who participated in the protests to demand better educational opportunities and democratic reforms. He was known for his eloquent speeches and his ability to inspire his peers to stand up for their rights.",
+        bio: "A bright student pursuing his Bachelor's degree in Economics, Bijay was active in student politics and was known for his analytical thinking and persuasive communication skills. He dreamed of becoming a policy maker to bring positive change to Nepal.",
+        family: "Survived by his parents and two sisters",
+        impact: "His speeches and writings continue to inspire young activists across the country."
+    },
+    "Binod Maharjan": {
+        name: "Binod Maharjan",
+        age: 23,
+        location: "Kathmandu",
+        occupation: "Artist",
+        story: "Binod was a talented artist who used his creative skills to design posters, banners, and artwork for the youth movement. His artistic contributions helped spread the message of democracy and justice through visual storytelling.",
+        bio: "A graduate of Fine Arts, Binod was known for his unique artistic style that combined traditional Nepali elements with modern design. He was passionate about using art as a medium for social change and had exhibited his work in several galleries.",
+        family: "Survived by his parents and younger brother",
+        impact: "His artwork became iconic symbols of the movement and continues to inspire artists and activists."
+    },
+    "Buddhi Bahadur Tamang": {
+        name: "Buddhi Bahadur Tamang",
+        age: 25,
+        location: "Sindhupalchok",
+        occupation: "Teacher",
+        story: "Buddhi was a dedicated teacher who believed in the power of education to bring about social change. He participated in the protests to demand better educational policies and democratic reforms that would benefit future generations.",
+        bio: "A primary school teacher in a remote village, Buddhi was known for his dedication to his students and his innovative teaching methods. He often used his own resources to provide school supplies to underprivileged children.",
+        family: "Survived by his wife and two young children",
+        impact: "His sacrifice highlighted the importance of education in building a democratic society."
+    }
+    // Add more martyrs as needed
+};
+
 // Stencils data - simplified to show only Artwork 1 for each martyr
 const stencilsData = [
     // Abhishek Shrestha
@@ -2276,7 +2331,7 @@ class ContactForm {
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         notification.innerHTML = `
-            <div class="notification-content">
+            <div class="notifgit addgit addication-content">
                 <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
                 <span>${message}</span>
                 <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
@@ -2312,7 +2367,100 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize accordion functionality for Get Justice section
     initializeAccordion();
+    
+    // Initialize martyr story modal
+    initializeMartyrStoryModal();
 });
+
+// Martyr Story Modal functionality
+function initializeMartyrStoryModal() {
+    // Create modal HTML if it doesn't exist
+    if (!document.getElementById('martyr-story-modal')) {
+        const modalHTML = `
+            <div id="martyr-story-modal" class="martyr-story-modal" style="display: none;">
+                <div class="martyr-modal-content">
+                    <span class="martyr-modal-close">&times;</span>
+                    <div class="martyr-modal-header">
+                        <h2 id="martyr-modal-name" class="martyr-modal-title"></h2>
+                        <div class="martyr-modal-meta">
+                            <span id="martyr-modal-age" class="martyr-meta-item"></span>
+                            <span id="martyr-modal-location" class="martyr-meta-item"></span>
+                            <span id="martyr-modal-occupation" class="martyr-meta-item"></span>
+                        </div>
+                    </div>
+                    <div class="martyr-modal-body">
+                        <div class="martyr-story-section">
+                            <h3>Their Story</h3>
+                            <p id="martyr-modal-story"></p>
+                        </div>
+                        <div class="martyr-bio-section">
+                            <h3>Biography</h3>
+                            <p id="martyr-modal-bio"></p>
+                        </div>
+                        <div class="martyr-family-section">
+                            <h3>Family</h3>
+                            <p id="martyr-modal-family"></p>
+                        </div>
+                        <div class="martyr-impact-section">
+                            <h3>Impact</h3>
+                            <p id="martyr-modal-impact"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+    }
+    
+    // Add event listeners
+    const modal = document.getElementById('martyr-story-modal');
+    const closeBtn = document.querySelector('.martyr-modal-close');
+    
+    closeBtn.addEventListener('click', closeMartyrModal);
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeMartyrModal();
+        }
+    });
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            closeMartyrModal();
+        }
+    });
+}
+
+function showMartyrStory(martyrName) {
+    const martyr = martyrsStories[martyrName];
+    if (!martyr) {
+        console.log('No story found for:', martyrName);
+        alert(`Story for ${martyrName} is not available yet. Please check back later.`);
+        return;
+    }
+    
+    const modal = document.getElementById('martyr-story-modal');
+    
+    // Populate modal content
+    document.getElementById('martyr-modal-name').textContent = martyr.name;
+    document.getElementById('martyr-modal-age').textContent = `${martyr.age} years old`;
+    document.getElementById('martyr-modal-location').textContent = martyr.location;
+    document.getElementById('martyr-modal-occupation').textContent = martyr.occupation;
+    document.getElementById('martyr-modal-story').textContent = martyr.story;
+    document.getElementById('martyr-modal-bio').textContent = martyr.bio;
+    document.getElementById('martyr-modal-family').textContent = martyr.family;
+    document.getElementById('martyr-modal-impact').textContent = martyr.impact;
+    
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeMartyrModal() {
+    const modal = document.getElementById('martyr-story-modal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
 
 // Accordion functionality for Get Justice section
 function initializeAccordion() {

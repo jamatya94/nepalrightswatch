@@ -184,10 +184,11 @@
                     stencilCard.appendChild(infoDiv);
                     stencilsGrid.appendChild(stencilCard);
                     
-                    // Add click event
+                    // Add click event to show martyr story
                     stencilCard.addEventListener('click', function() {
                         console.log('Stencil clicked:', stencil.name);
-                        alert(`${stencil.name} stencil clicked!`);
+                        const martyrName = stencil.martyr || stencil.name.split(' - ')[0];
+                        showMartyrStory(martyrName);
                     });
                 });
             } else {

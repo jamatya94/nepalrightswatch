@@ -183,10 +183,11 @@
                     sketchCard.appendChild(infoDiv);
                     sketchesGrid.appendChild(sketchCard);
                     
-                    // Add click event
+                    // Add click event to show martyr story
                     sketchCard.addEventListener('click', function() {
                         console.log('Sketch clicked:', sketch.name);
-                        alert(`${sketch.name} sketch clicked!`);
+                        const martyrName = sketch.name.split(' - ')[0]; // Extract name from "Binod Maharjan - Artistic Design"
+                        showMartyrStory(martyrName);
                     });
                 });
             } else {

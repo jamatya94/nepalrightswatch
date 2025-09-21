@@ -3364,6 +3364,173 @@ body::before {
     text-align: center;
 }
 
+/* Martyr Story Modal */
+.martyr-story-modal {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.martyr-modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.martyr-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    z-index: 10001;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.martyr-modal-close:hover {
+    color: #dc2626;
+    background-color: #f8f9fa;
+}
+
+.martyr-modal-header {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: white;
+    padding: 30px;
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+}
+
+.martyr-modal-title {
+    margin: 0 0 15px 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.martyr-modal-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.martyr-meta-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+.martyr-modal-body {
+    padding: 30px;
+}
+
+.martyr-story-section,
+.martyr-bio-section,
+.martyr-family-section,
+.martyr-impact-section {
+    margin-bottom: 25px;
+}
+
+.martyr-story-section h3,
+.martyr-bio-section h3,
+.martyr-family-section h3,
+.martyr-impact-section h3 {
+    color: #dc2626;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.martyr-story-section p,
+.martyr-bio-section p,
+.martyr-family-section p,
+.martyr-impact-section p {
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Responsive design for modal */
+@media (max-width: 768px) {
+    .martyr-story-modal {
+        padding: 10px;
+    }
+    
+    .martyr-modal-content {
+        max-height: 95vh;
+    }
+    
+    .martyr-modal-header {
+        padding: 20px;
+    }
+    
+    .martyr-modal-title {
+        font-size: 24px;
+    }
+    
+    .martyr-modal-meta {
+        gap: 10px;
+    }
+    
+    .martyr-meta-item {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .martyr-modal-body {
+        padding: 20px;
+    }
+    
+    .martyr-modal-close {
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
 /* Responsive Contact Form */
 @media (max-width: 768px) {
     .contact-form {
