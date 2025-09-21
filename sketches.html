@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistic Sketches - Nepal Gen Z Protests Memorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="flag-emoji">🇳🇵</span>
+                <span class="logo-text">Nepal's Democratic Revolution</span>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="get-justice.html" class="nav-link">Get Justice</a>
+                <a href="sketches.html" class="nav-link active">Sketches</a>
+                <a href="stencils.html" class="nav-link">Stencils</a>
+                <a href="media.html" class="nav-link">Media</a>
+                <a href="latest-updates.html" class="nav-link">Latest Updates</a>
+                <a href="victim-form.html" class="nav-link">Victim Information Form</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sketches Gallery Section -->
+    <section id="sketches" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Artistic Sketches</h2>
+            <p class="section-subtitle">Hand-drawn sketches and artistic designs honoring our martyrs</p>
+            <div id="sketches-grid" class="gallery-grid">
+                <!-- Sketches will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🇳🇵 Nepal's Democratic Revolution</h3>
+                    <p>Honoring the brave hearts who stood for justice and democracy.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="get-justice.html">Get Justice</a></li>
+                        <li><a href="victim-form.html">Victim Information Form</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nepal's Democratic Revolution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle" class="modal-title"></h3>
+                <p id="modalMartyr" class="modal-martyr"></p>
+                <p id="modalDescription" class="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

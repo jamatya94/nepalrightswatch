@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support - Nepal Gen Z Protests Memorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="flag-emoji">🇳🇵</span>
+                <span class="logo-text">Nepal's Democratic Revolution</span>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="get-justice.html" class="nav-link">Get Justice</a>
+                <a href="sketches.html" class="nav-link">Sketches</a>
+                <a href="stencils.html" class="nav-link">Stencils</a>
+                <a href="media.html" class="nav-link">Media</a>
+                <a href="latest-updates.html" class="nav-link">Latest Updates</a>
+                <a href="victim-form.html" class="nav-link">Victim Information Form</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Support</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>If you have information about the martyrs or want to contribute to this memorial, please contact us.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@nepalgenzmemorial.org</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>+977-1-2345678</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <!-- 🔧 SETUP REQUIRED: Replace 'YOUR_FORMSPREE_ID_HERE' with your actual Formspree form ID -->
+                    <!-- This action attribute serves as a fallback if JavaScript is disabled -->
+                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+                        <input type="text" name="name" placeholder="Your Name">
+                        <input type="email" name="email" placeholder="Your Email">
+                        <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+                        <!-- Hidden fields for Formspree configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Nepal Gen Z Memorial">
+                        <input type="hidden" name="_cc" value="rumbc1@gmail.com">
+                        <input type="hidden" name="_next" value="https://main.d1bixeem5bp8hx.amplifyapp.com/#contact">
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🇳🇵 Nepal's Democratic Revolution</h3>
+                    <p>Honoring the brave hearts who stood for justice and democracy.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="get-justice.html">Get Justice</a></li>
+                        <li><a href="victim-form.html">Victim Information Form</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nepal's Democratic Revolution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
