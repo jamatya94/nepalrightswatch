@@ -1033,6 +1033,12 @@ body::before {
         max-height: 95vh;
         border-radius: var(--radius-lg);
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .modal-image {
+        max-height: 40vh;
     }
     
     /* Text selection improvements */
@@ -2492,8 +2498,11 @@ body::before {
     max-height: 90vh;
     background: var(--nepal-white);
     border-radius: 12px;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-close {
@@ -2522,8 +2531,9 @@ body::before {
 .modal-image {
     width: 100%;
     height: auto;
-    max-height: 70vh;
+    max-height: 50vh;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .modal-info {
