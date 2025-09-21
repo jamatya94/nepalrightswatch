@@ -43,7 +43,11 @@
         <div class="container">
             <h2 class="section-title">Stencil Artwork</h2>
             <p class="section-subtitle">Stencil designs and artwork created in memory of our fallen heroes</p>
-            <div id="stencils-grid" class="gallery-grid">
+            <div class="loading-indicator" id="stencils-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading stencils...</p>
+            </div>
+            <div id="stencils-grid" class="gallery-grid" style="display: none;">
                 <!-- Stencils will be loaded dynamically -->
             </div>
         </div>

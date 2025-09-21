@@ -305,7 +305,8 @@ const sketchesData = [
         id: 1,
         name: "Binod Maharjan - Artistic Design",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Sketches/Binod Design.png",
-        description: "Artistic design sketch of Binod Maharjan"
+        description: "Artistic design sketch of Binod Maharjan",
+        fallbackImage: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjhGOUZBIi8+CjxwYXRoIGQ9Ik0xMDAgNTBMMTUwIDEwMEwxMDAgMTUwTDUwIDEwMEwxMDAgNTBaIiBzdHJva2U9IiNERDI2MjYiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgo8dGV4dCB4PSIxMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzk5OTk5OSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIj5Ta2V0Y2ggSW1hZ2U8L3RleHQ+Cjwvc3ZnPgo="
     }
 ];
 
@@ -317,7 +318,8 @@ const stencilsData = [
         name: "Abhishek Shrestha - Artwork",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Abhishek Shrestha/Untitled_Artwork.jpg",
         martyr: "Abhishek Shrestha",
-        description: "Stencil artwork of Abhishek Shrestha"
+        description: "Stencil artwork of Abhishek Shrestha",
+        fallbackImage: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjhGOUZBIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNDAiIHN0cm9rZT0iI0REMjYyNiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiPkFiaGlzaGVrIFNocmVzdGhhPC90ZXh0Pgo8L3N2Zz4K"
     },
     // Ayush Thapa
     {
@@ -572,6 +574,8 @@ function loadMartyrs() {
 // Load sketches into the gallery
 function loadSketches() {
     const sketchesGrid = document.getElementById('sketches-grid');
+    const loadingIndicator = document.getElementById('sketches-loading');
+    
     if (!sketchesGrid) return;
     
     sketchesGrid.innerHTML = '';
@@ -580,11 +584,19 @@ function loadSketches() {
         const sketchCard = createGalleryCard(sketch, index, 'sketch');
         sketchesGrid.appendChild(sketchCard);
     });
+    
+    // Hide loading indicator and show content
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+    }
+    sketchesGrid.style.display = 'grid';
 }
 
 // Load stencils into the gallery
 function loadStencils() {
     const stencilsGrid = document.getElementById('stencils-grid');
+    const loadingIndicator = document.getElementById('stencils-loading');
+    
     if (!stencilsGrid) return;
     
     stencilsGrid.innerHTML = '';
@@ -593,6 +605,12 @@ function loadStencils() {
         const stencilCard = createGalleryCard(stencil, index, 'stencil');
         stencilsGrid.appendChild(stencilCard);
     });
+    
+    // Hide loading indicator and show content
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+    }
+    stencilsGrid.style.display = 'grid';
 }
 
 // Create gallery card for sketches and stencils
@@ -610,7 +628,10 @@ function createGalleryCard(item, index, type) {
     
     card.innerHTML = `
         <div class="gallery-image-container">
-            <img src="${imageSrc}" alt="${title}" class="gallery-image" loading="lazy">
+            <div class="image-placeholder">
+                <div class="image-spinner"></div>
+            </div>
+            <img src="${imageSrc}" alt="${title}" class="gallery-image" loading="lazy" style="display: none;">
             <div class="image-overlay">
                 <div class="overlay-content">
                     <h3>${title}</h3>
@@ -620,6 +641,32 @@ function createGalleryCard(item, index, type) {
             </div>
         </div>
     `;
+    
+    // Handle image loading
+    const img = card.querySelector('.gallery-image');
+    const placeholder = card.querySelector('.image-placeholder');
+    
+    img.onload = function() {
+        placeholder.style.display = 'none';
+        img.style.display = 'block';
+        console.log('Image loaded successfully:', imageSrc);
+    };
+    
+    img.onerror = function() {
+        // Try fallback image if available
+        if (item.fallbackImage) {
+            img.src = item.fallbackImage;
+            img.onerror = function() {
+                placeholder.innerHTML = '<div class="image-error">Failed to load image<br><small>Check S3 bucket permissions</small></div>';
+                img.style.display = 'none';
+                console.error('Failed to load both original and fallback image:', imageSrc);
+            };
+        } else {
+            placeholder.innerHTML = '<div class="image-error">Failed to load image<br><small>Check S3 bucket permissions</small></div>';
+            img.style.display = 'none';
+            console.error('Failed to load image:', imageSrc);
+        }
+    };
     
     // Add click event listener to show modal for stencils and sketches
     card.addEventListener('click', () => {

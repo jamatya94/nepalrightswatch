@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test - Nepal Gen Z Memorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-image {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .test-image img {
+            max-width: 200px;
+            height: auto;
+        }
+        .status {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>S3 Image Accessibility Test</h1>
+    <p>Testing if images from the S3 bucket are accessible...</p>
+    
+    <div id="test-results"></div>
+    
+    <script>
+        // Test URLs from the data
+        const testUrls = [
+            "https://nepalgenz.s3.us-east-1.amazonaws.com/Sketches/Binod Design.png",
+            "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Abhishek Shrestha/Untitled_Artwork.jpg",
+            "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58.602Z",
+            "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bijay Chaudhary/Bijay_Chaudhary.jpg"
+        ];
+        
+        const resultsDiv = document.getElementById('test-results');
+        
+        testUrls.forEach((url, index) => {
+            const testDiv = document.createElement('div');
+            testDiv.className = 'test-image';
+            testDiv.innerHTML = `
+                <h3>Test ${index + 1}</h3>
+                <p><strong>URL:</strong> ${url}</p>
+                <img src="${url}" alt="Test image" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+                <div class="status" id="status-${index}">Loading...</div>
+            `;
+            resultsDiv.appendChild(testDiv);
+        });
+        
+        function showStatus(img, status) {
+            const statusDiv = img.parentElement.querySelector('.status');
+            if (status === 'success') {
+                statusDiv.innerHTML = '<span class="success">✅ Image loaded successfully</span>';
+            } else {
+                statusDiv.innerHTML = '<span class="error">❌ Failed to load image - Check S3 permissions</span>';
+            }
+        }
+    </script>
+</body>
+</html>

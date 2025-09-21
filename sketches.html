@@ -43,7 +43,11 @@
         <div class="container">
             <h2 class="section-title">Artistic Sketches</h2>
             <p class="section-subtitle">Hand-drawn sketches and artistic designs honoring our martyrs</p>
-            <div id="sketches-grid" class="gallery-grid">
+            <div class="loading-indicator" id="sketches-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading sketches...</p>
+            </div>
+            <div id="sketches-grid" class="gallery-grid" style="display: none;">
                 <!-- Sketches will be loaded dynamically -->
             </div>
         </div>
