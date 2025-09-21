@@ -192,10 +192,10 @@
                     sketchCard.appendChild(infoDiv);
                     sketchesGrid.appendChild(sketchCard);
                     
-                    // Add click event
+                    // Add click event to show image modal
                     sketchCard.addEventListener('click', function() {
                         console.log('Sketch clicked:', sketch.name);
-                        alert(`${sketch.name} sketch clicked!`);
+                        showImageModal(sketch);
                     });
                 });
             } else {
@@ -204,6 +204,53 @@
             
             console.log('Sketches loading completed');
         }
+        
+        // Function to show image modal
+        function showImageModal(sketch) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMartyr = document.getElementById('modalMartyr');
+            const modalDescription = document.getElementById('modalDescription');
+            
+            if (modal && modalImage && modalTitle && modalMartyr && modalDescription) {
+                // Set the image source (use fallback if main image fails)
+                modalImage.src = sketch.image;
+                modalImage.onerror = function() {
+                    if (sketch.fallbackImage) {
+                        modalImage.src = sketch.fallbackImage;
+                    }
+                };
+                
+                // Set the text content
+                modalTitle.textContent = sketch.name;
+                modalMartyr.textContent = sketch.martyr ? `In memory of: ${sketch.martyr}` : '';
+                modalDescription.textContent = sketch.description;
+                
+                // Show the modal
+                modal.style.display = 'flex';
+            }
+        }
+        
+        // Close modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const closeBtn = document.querySelector('.modal-close');
+            
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                });
+            }
+            
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
