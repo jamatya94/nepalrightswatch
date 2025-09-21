@@ -142,29 +142,35 @@
             testSketch.className = 'gallery-card sketch-card';
             testSketch.style.cssText = 'display: block; visibility: visible; opacity: 1;';
             
-            // Create the container
-            const container = document.createElement('div');
-            container.style.cssText = 'display: block; visibility: visible; background: #f8f9fa; border-radius: 8px; padding: 20px; text-align: center; width: 100%;';
-            
-            // Create the main content div
+            // Create the main content div with gradient background
             const contentDiv = document.createElement('div');
-            contentDiv.style.cssText = 'width: 100%; height: 200px; background: linear-gradient(135deg, #1e40af, #3b82f6); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); flex-direction: column;';
+            contentDiv.style.cssText = `
+                width: 100%; 
+                height: 200px; 
+                background: linear-gradient(135deg, #1e40af, #3b82f6); 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                color: white; 
+                font-weight: bold; 
+                font-size: 18px; 
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                flex-direction: column;
+                position: relative;
+            `;
             contentDiv.innerHTML = 'Binod Maharjan<br><small style="font-size: 14px;">Artistic Design</small>';
             
-            // Create overlay
-            const overlay = document.createElement('div');
-            overlay.className = 'image-overlay';
-            overlay.innerHTML = `
-                <div class="overlay-content">
-                    <h3>Binod Maharjan - Artistic Design</h3>
-                    <p>Artistic design sketch of Binod Maharjan</p>
-                </div>
+            // Create info section
+            const infoDiv = document.createElement('div');
+            infoDiv.style.cssText = 'padding: 15px; background: white;';
+            infoDiv.innerHTML = `
+                <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #333;">Binod Maharjan - Artistic Design</h3>
+                <p style="margin: 0; font-size: 14px; color: #666;">Artistic design sketch of Binod Maharjan</p>
             `;
             
             // Append everything
-            container.appendChild(contentDiv);
-            container.appendChild(overlay);
-            testSketch.appendChild(container);
+            testSketch.appendChild(contentDiv);
+            testSketch.appendChild(infoDiv);
             
             sketchesGrid.appendChild(testSketch);
             console.log('Test sketch added successfully');
