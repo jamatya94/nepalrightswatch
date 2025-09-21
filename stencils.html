@@ -95,6 +95,33 @@
                 <h3 id="modalTitle" class="modal-title"></h3>
                 <p id="modalMartyr" class="modal-martyr"></p>
                 <p id="modalDescription" class="modal-description"></p>
+                
+                <div class="modal-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Age:</span>
+                        <span id="modalAge" class="detail-value"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Occupation:</span>
+                        <span id="modalOccupation" class="detail-value"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Location:</span>
+                        <span id="modalLocation" class="detail-value"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Role:</span>
+                        <span id="modalRole" class="detail-value"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">How they became a Martyr:</span>
+                        <span id="modalMartyrStory" class="detail-value"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Short Biography:</span>
+                        <span id="modalBiography" class="detail-value"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -213,6 +240,12 @@
             const modalTitle = document.getElementById('modalTitle');
             const modalMartyr = document.getElementById('modalMartyr');
             const modalDescription = document.getElementById('modalDescription');
+            const modalAge = document.getElementById('modalAge');
+            const modalOccupation = document.getElementById('modalOccupation');
+            const modalLocation = document.getElementById('modalLocation');
+            const modalRole = document.getElementById('modalRole');
+            const modalMartyrStory = document.getElementById('modalMartyrStory');
+            const modalBiography = document.getElementById('modalBiography');
             
             if (modal && modalImage && modalTitle && modalMartyr && modalDescription) {
                 // Set the image source (use fallback if main image fails)
@@ -227,6 +260,14 @@
                 modalTitle.textContent = stencil.name;
                 modalMartyr.textContent = stencil.martyr ? `In memory of: ${stencil.martyr}` : '';
                 modalDescription.textContent = stencil.description;
+                
+                // Set the new detail fields
+                if (modalAge) modalAge.textContent = stencil.age || '--';
+                if (modalOccupation) modalOccupation.textContent = stencil.occupation || '--';
+                if (modalLocation) modalLocation.textContent = stencil.location || '--';
+                if (modalRole) modalRole.textContent = stencil.role || '--';
+                if (modalMartyrStory) modalMartyrStory.textContent = stencil.martyrStory || '--';
+                if (modalBiography) modalBiography.textContent = stencil.biography || '--';
                 
                 // Show the modal
                 modal.style.display = 'flex';

@@ -306,7 +306,19 @@ const sketchesData = [
         name: "Binod Maharjan - Artistic Design",
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Sketches/Binod Design.png",
         description: "Artistic design sketch of Binod Maharjan",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     }
 ];
 
@@ -319,7 +331,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Abhishek Shrestha/Untitled_Artwork.jpg",
         martyr: "Abhishek Shrestha",
         description: "Stencil artwork of Abhishek Shrestha",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Ayush Thapa
     {
@@ -328,7 +346,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ayush Thapa/File - 2025-09-15T02_15_58.602Z",
         martyr: "Ayush Thapa",
         description: "Stencil artwork of Ayush Thapa",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Bijay Chaudhary
     {
@@ -337,7 +361,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Bijay Chaudhary/Bijay_Chaudhary.jpg",
         martyr: "Bijay Chaudhary",
         description: "Stencil artwork of Bijay Chaudhary",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Binod Maharjan
     {
@@ -346,7 +376,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Binod Maharjan/Untitled_Artwork.jpg",
         martyr: "Binod Maharjan",
         description: "Stencil artwork of Binod Maharjan",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Buddhi Bahadur Tamang
     {
@@ -355,7 +391,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Buddhi Bahadur Tamang/Buddhi Bahadur Tamang.jpg",
         martyr: "Buddhi Bahadur Tamang",
         description: "Stencil artwork of Buddhi Bahadur Tamang",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Dev Kumar Subedi
     {
@@ -364,7 +406,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dev Kumar Subedi/File - 2025-09-15T02_15_27.138Z",
         martyr: "Dev Kumar Subedi",
         description: "Stencil artwork of Dev Kumar Subedi",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Dhiraj Shrestha
     {
@@ -373,7 +421,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dhiraj Shrestha/Dhiraj_Shrestha.jpg",
         martyr: "Dhiraj Shrestha",
         description: "Stencil artwork of Dhiraj Shrestha",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Dipesh Sunuwar
     {
@@ -382,7 +436,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Dipesh Sunuwar/Dipesh_Sunuwar.jpg",
         martyr: "Dipesh Sunuwar",
         description: "Stencil artwork of Dipesh Sunuwar",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Gaurav Joshi
     {
@@ -391,7 +451,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Gaurav Joshi/Untitled_Artwork.jpg",
         martyr: "Gaurav Joshi",
         description: "Stencil artwork of Gaurav Joshi",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Ishwat Adhikari
     {
@@ -400,7 +466,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Ishwat Adhikari/Untitled_Artwork.jpg",
         martyr: "Ishwat Adhikari",
         description: "Stencil artwork of Ishwat Adhikari",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Mishal Saru Magar
     {
@@ -409,7 +481,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mishal Saru Magar/Mishal_Saru_Magar.jpg",
         martyr: "Mishal Saru Magar",
         description: "Stencil artwork of Mishal Saru Magar",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Mohan Sardar
     {
@@ -418,7 +496,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Mohan Sardar/Mohan_Sardar.jpg",
         martyr: "Mohan Sardar",
         description: "Stencil artwork of Mohan Sardar",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Prabin Kulung
     {
@@ -427,7 +511,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Prabin Kulung/Prabin_Kulung.jpg",
         martyr: "Prabin Kulung",
         description: "Stencil artwork of Prabin Kulung",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Rashik Khatiwoda
     {
@@ -436,7 +526,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Rashik Khatiwoda/Rashik_Khatiwoda.jpg",
         martyr: "Rashik Khatiwoda",
         description: "Stencil artwork of Rashik Khatiwoda",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Santosh Bishwakarma
     {
@@ -445,7 +541,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Santosh Bishwakarma/Santosh_Bishwakarma.jpg",
         martyr: "Santosh Bishwakarma",
         description: "Stencil artwork of Santosh Bishwakarma",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Sauron Kishor Shrestha
     {
@@ -454,7 +556,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sauron Kishor Shrestha/Sauron_Kishor_Shrestha.jpg",
         martyr: "Sauron Kishor Shrestha",
         description: "Stencil artwork of Sauron Kishor Shrestha",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Shri Krishna Shrestha
     {
@@ -463,7 +571,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shri Krishna Shrestha/Shri_Krishna_Shrestha.jpg",
         martyr: "Shri Krishna Shrestha",
         description: "Stencil artwork of Shri Krishna Shrestha",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Shriyam
     {
@@ -472,7 +586,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Shriyam layers/Untitled_Artwork 7.jpg",
         martyr: "Shriyam",
         description: "Stencil artwork of Shriyam",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Subash Bohara
     {
@@ -481,7 +601,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Subash Bohara/Subash_Bohara.jpg",
         martyr: "Subash Bohara",
         description: "Stencil artwork of Subash Bohara",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // Sulav Raj Shrestha
     {
@@ -490,7 +616,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Sulav Raj Shrestha/Sulav_Raj_Shrestha.jpg",
         martyr: "Sulav Raj Shrestha",
         description: "Stencil artwork of Sulav Raj Shrestha",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     // General Info and Text stencils
     {
@@ -499,7 +631,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Info.jpg",
         martyr: "General",
         description: "General information stencil artwork",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     {
         id: 22,
@@ -507,7 +645,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Text grey.jpg",
         martyr: "General",
         description: "Grey text stencil artwork",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     },
     {
         id: 23,
@@ -515,7 +659,13 @@ const stencilsData = [
         image: "https://nepalgenz.s3.us-east-1.amazonaws.com/Stencils/Text red.jpg",
         martyr: "General",
         description: "Red text stencil artwork",
-        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg"
+        fallbackImage: "assets/images/Placeholder_Martyr_1.jpg",
+        age: "--",
+        occupation: "--",
+        location: "--",
+        role: "--",
+        martyrStory: "--",
+        biography: "--"
     }
 ];
 

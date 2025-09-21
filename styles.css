@@ -2549,6 +2549,32 @@ body::before {
     margin: 0;
 }
 
+.modal-details {
+    margin-top: var(--spacing-lg);
+    border-top: 1px solid var(--gray-200);
+    padding-top: var(--spacing-lg);
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: var(--spacing-sm);
+    align-items: flex-start;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--gray-700);
+    min-width: 140px;
+    margin-right: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.detail-value {
+    color: var(--gray-600);
+    flex: 1;
+    word-wrap: break-word;
+}
+
 /* Responsive Gallery */
 @media (max-width: 768px) {
     .gallery-grid {
