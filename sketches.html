@@ -103,8 +103,56 @@
     <script>
         // Load sketches when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            loadSketches();
+            console.log('DOM loaded, attempting to load sketches...');
+            
+            // Check if loadSketches function exists
+            if (typeof loadSketches === 'function') {
+                console.log('loadSketches function found, calling it...');
+                loadSketches();
+            } else {
+                console.error('loadSketches function not found!');
+                // Fallback: manually load sketches
+                loadSketchesManually();
+            }
         });
+        
+        // Fallback function to manually load sketches
+        function loadSketchesManually() {
+            console.log('Loading sketches manually...');
+            const sketchesGrid = document.getElementById('sketches-grid');
+            const loadingIndicator = document.getElementById('sketches-loading');
+            
+            if (!sketchesGrid) {
+                console.error('sketches-grid element not found!');
+                return;
+            }
+            
+            // Hide loading indicator
+            if (loadingIndicator) {
+                loadingIndicator.style.display = 'none';
+            }
+            
+            // Show the grid
+            sketchesGrid.style.display = 'grid';
+            
+            // Add a test sketch
+            const testSketch = document.createElement('div');
+            testSketch.className = 'gallery-card sketch-card';
+            testSketch.innerHTML = `
+                <div class="gallery-image-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjhGOUZBIi8+CjxwYXRoIGQ9Ik0xMDAgNTBMMTUwIDEwMEwxMDAgMTUwTDUwIDEwMEwxMDAgNTBaIiBzdHJva2U9IiNERDI2MjYiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgo8dGV4dCB4PSIxMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzk5OTk5OSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIj5CaW5vZCBNYWhhcmphbiAtIFN0ZW5jaWw8L3RleHQ+Cjwvc3ZnPgo=" alt="Test Sketch" class="gallery-image">
+                    <div class="image-overlay">
+                        <div class="overlay-content">
+                            <h3>Binod Maharjan - Artistic Design</h3>
+                            <p>Artistic design sketch of Binod Maharjan</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            sketchesGrid.appendChild(testSketch);
+            console.log('Test sketch added successfully');
+        }
     </script>
 </body>
 </html>

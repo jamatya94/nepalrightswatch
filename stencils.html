@@ -103,8 +103,68 @@
     <script>
         // Load stencils when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            loadStencils();
+            console.log('DOM loaded, attempting to load stencils...');
+            
+            // Check if loadStencils function exists
+            if (typeof loadStencils === 'function') {
+                console.log('loadStencils function found, calling it...');
+                loadStencils();
+            } else {
+                console.error('loadStencils function not found!');
+                // Fallback: manually load stencils
+                loadStencilsManually();
+            }
         });
+        
+        // Fallback function to manually load stencils
+        function loadStencilsManually() {
+            console.log('Loading stencils manually...');
+            const stencilsGrid = document.getElementById('stencils-grid');
+            const loadingIndicator = document.getElementById('stencils-loading');
+            
+            if (!stencilsGrid) {
+                console.error('stencils-grid element not found!');
+                return;
+            }
+            
+            // Hide loading indicator
+            if (loadingIndicator) {
+                loadingIndicator.style.display = 'none';
+            }
+            
+            // Show the grid
+            stencilsGrid.style.display = 'grid';
+            
+            // Add test stencils
+            const martyrs = [
+                'Abhishek Shrestha', 'Ayush Thapa', 'Bijay Chaudhary', 'Binod Maharjan',
+                'Buddhi Bahadur Tamang', 'Dev Kumar Subedi', 'Dhiraj Shrestha', 'Dipesh Sunuwar',
+                'Gaurav Joshi', 'Ishwat Adhikari', 'Mishal Saru Magar', 'Mohan Sardar',
+                'Prabin Kulung', 'Rashik Khatiwoda', 'Santosh Bishwakarma', 'Sauron Kishor Shrestha',
+                'Shri Krishna Shrestha', 'Shriyam', 'Subash Bohara', 'Sulav Raj Shrestha'
+            ];
+            
+            martyrs.forEach((martyr, index) => {
+                const testStencil = document.createElement('div');
+                testStencil.className = 'gallery-card stencil-card';
+                testStencil.innerHTML = `
+                    <div class="gallery-image-container">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjhGOUZBIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNDAiIHN0cm9rZT0iI0REMjYyNiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiPk1hcnR5ciBTdGVuY2lsPC90ZXh0Pgo8L3N2Zz4K" alt="Test Stencil" class="gallery-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>${martyr} - Artwork</h3>
+                                <p class="martyr-name">In memory of: ${martyr}</p>
+                                <p>Stencil artwork of ${martyr}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                stencilsGrid.appendChild(testStencil);
+            });
+            
+            console.log('Test stencils added successfully');
+        }
     </script>
 </body>
 </html>
