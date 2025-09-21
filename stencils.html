@@ -110,14 +110,11 @@
             loadStencilsManually();
         });
         
-        // Fallback function to manually load stencils
+        // Load stencils with real S3 images
         function loadStencilsManually() {
-            console.log('Loading stencils manually...');
+            console.log('Loading stencils with S3 images...');
             const stencilsGrid = document.getElementById('stencils-grid');
             const loadingIndicator = document.getElementById('stencils-loading');
-            
-            console.log('stencilsGrid element:', stencilsGrid);
-            console.log('loadingIndicator element:', loadingIndicator);
             
             if (!stencilsGrid) {
                 console.error('stencils-grid element not found!');
@@ -127,74 +124,77 @@
             // Hide loading indicator
             if (loadingIndicator) {
                 loadingIndicator.style.display = 'none';
-                console.log('Loading indicator hidden');
             }
             
-            // Show the grid with explicit styles
+            // Show the grid
             stencilsGrid.style.display = 'grid';
             stencilsGrid.style.visibility = 'visible';
             stencilsGrid.style.opacity = '1';
-            console.log('Grid display set to:', stencilsGrid.style.display);
-            console.log('Grid visibility set to:', stencilsGrid.style.visibility);
             
-            // Add test stencils
-            const martyrs = [
-                'Abhishek Shrestha', 'Ayush Thapa', 'Bijay Chaudhary', 'Binod Maharjan',
-                'Buddhi Bahadur Tamang', 'Dev Kumar Subedi', 'Dhiraj Shrestha', 'Dipesh Sunuwar',
-                'Gaurav Joshi', 'Ishwat Adhikari', 'Mishal Saru Magar', 'Mohan Sardar',
-                'Prabin Kulung', 'Rashik Khatiwoda', 'Santosh Bishwakarma', 'Sauron Kishor Shrestha',
-                'Shri Krishna Shrestha', 'Shriyam', 'Subash Bohara', 'Sulav Raj Shrestha'
-            ];
-            
-            martyrs.forEach((martyr, index) => {
-                const testStencil = document.createElement('div');
-                testStencil.className = 'gallery-card stencil-card';
-                testStencil.style.cssText = 'display: block; visibility: visible; opacity: 1; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 20px;';
+            // Use the real stencils data from script.js
+            if (typeof stencilsData !== 'undefined') {
+                console.log('Found stencilsData, loading', stencilsData.length, 'stencils');
                 
-                // Create the main content div with gradient background
-                const contentDiv = document.createElement('div');
-                contentDiv.style.cssText = `
-                    width: 100%; 
-                    height: 200px; 
-                    background: linear-gradient(135deg, #dc2626, #ef4444); 
-                    display: flex; 
-                    align-items: center; 
-                    justify-content: center; 
-                    color: white; 
-                    font-weight: bold; 
-                    font-size: 18px; 
-                    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-                    position: relative;
-                `;
-                contentDiv.textContent = martyr;
-                
-                // Create info section
-                const infoDiv = document.createElement('div');
-                infoDiv.style.cssText = 'padding: 15px; background: white;';
-                infoDiv.innerHTML = `
-                    <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #333;">${martyr} - Artwork</h3>
-                    <p style="margin: 0 0 5px 0; font-size: 14px; color: #dc2626; font-weight: bold;">In memory of: ${martyr}</p>
-                    <p style="margin: 0; font-size: 14px; color: #666;">Stencil artwork of ${martyr}</p>
-                `;
-                
-                // Append everything
-                testStencil.appendChild(contentDiv);
-                testStencil.appendChild(infoDiv);
-                stencilsGrid.appendChild(testStencil);
-                
-                // Add click event to test visibility
-                testStencil.addEventListener('click', function() {
-                    console.log('Stencil clicked:', martyr);
-                    alert(`${martyr} stencil is working!`);
+                stencilsData.forEach((stencil, index) => {
+                    const stencilCard = document.createElement('div');
+                    stencilCard.className = 'gallery-card stencil-card';
+                    stencilCard.style.cssText = 'display: block; visibility: visible; opacity: 1; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 20px;';
+                    
+                    // Create image container
+                    const imageContainer = document.createElement('div');
+                    imageContainer.style.cssText = 'width: 100%; height: 200px; position: relative; background: #f8f9fa; display: flex; align-items: center; justify-content: center;';
+                    
+                    // Create actual image element
+                    const img = document.createElement('img');
+                    img.src = stencil.image;
+                    img.alt = stencil.name;
+                    img.style.cssText = 'width: 100%; height: 100%; object-fit: cover;';
+                    
+                    // Create loading placeholder
+                    const placeholder = document.createElement('div');
+                    placeholder.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #dc2626, #ef4444); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 16px;';
+                    placeholder.textContent = stencil.martyr || stencil.name;
+                    
+                    // Handle image loading
+                    img.onload = function() {
+                        console.log('S3 image loaded successfully:', stencil.image);
+                        placeholder.style.display = 'none';
+                    };
+                    
+                    img.onerror = function() {
+                        console.error('Failed to load S3 image:', stencil.image);
+                        placeholder.style.display = 'flex';
+                        placeholder.innerHTML = `${stencil.martyr || stencil.name}<br><small style="font-size: 12px;">Image unavailable</small>`;
+                    };
+                    
+                    imageContainer.appendChild(img);
+                    imageContainer.appendChild(placeholder);
+                    
+                    // Create info section
+                    const infoDiv = document.createElement('div');
+                    infoDiv.style.cssText = 'padding: 15px; background: white;';
+                    infoDiv.innerHTML = `
+                        <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #333;">${stencil.name}</h3>
+                        ${stencil.martyr ? `<p style="margin: 0 0 5px 0; font-size: 14px; color: #dc2626; font-weight: bold;">In memory of: ${stencil.martyr}</p>` : ''}
+                        <p style="margin: 0; font-size: 14px; color: #666;">${stencil.description}</p>
+                    `;
+                    
+                    // Append everything
+                    stencilCard.appendChild(imageContainer);
+                    stencilCard.appendChild(infoDiv);
+                    stencilsGrid.appendChild(stencilCard);
+                    
+                    // Add click event
+                    stencilCard.addEventListener('click', function() {
+                        console.log('Stencil clicked:', stencil.name);
+                        alert(`${stencil.name} stencil clicked!`);
+                    });
                 });
-            });
+            } else {
+                console.error('stencilsData not found in script.js');
+            }
             
-            console.log('Test stencils added successfully');
-            console.log('Total children in grid:', stencilsGrid.children.length);
-            console.log('Grid computed style:', window.getComputedStyle(stencilsGrid));
-            
-            // Force a reflow
-            stencilsGrid.offsetHeight;
+            console.log('Stencils loading completed');
         }
     </script>
 </body>
