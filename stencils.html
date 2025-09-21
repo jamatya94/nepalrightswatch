@@ -105,15 +105,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM loaded, attempting to load stencils...');
             
-            // Check if loadStencils function exists
-            if (typeof loadStencils === 'function') {
-                console.log('loadStencils function found, calling it...');
-                loadStencils();
-            } else {
-                console.error('loadStencils function not found!');
-                // Fallback: manually load stencils
-                loadStencilsManually();
-            }
+            // Always use manual loading for now to ensure it works
+            console.log('Using manual loading to ensure visibility...');
+            loadStencilsManually();
         });
         
         // Fallback function to manually load stencils
@@ -121,6 +115,9 @@
             console.log('Loading stencils manually...');
             const stencilsGrid = document.getElementById('stencils-grid');
             const loadingIndicator = document.getElementById('stencils-loading');
+            
+            console.log('stencilsGrid element:', stencilsGrid);
+            console.log('loadingIndicator element:', loadingIndicator);
             
             if (!stencilsGrid) {
                 console.error('stencils-grid element not found!');
@@ -130,10 +127,15 @@
             // Hide loading indicator
             if (loadingIndicator) {
                 loadingIndicator.style.display = 'none';
+                console.log('Loading indicator hidden');
             }
             
-            // Show the grid
+            // Show the grid with explicit styles
             stencilsGrid.style.display = 'grid';
+            stencilsGrid.style.visibility = 'visible';
+            stencilsGrid.style.opacity = '1';
+            console.log('Grid display set to:', stencilsGrid.style.display);
+            console.log('Grid visibility set to:', stencilsGrid.style.visibility);
             
             // Add test stencils
             const martyrs = [
@@ -147,9 +149,11 @@
             martyrs.forEach((martyr, index) => {
                 const testStencil = document.createElement('div');
                 testStencil.className = 'gallery-card stencil-card';
+                testStencil.style.cssText = 'display: block; visibility: visible; opacity: 1;';
+                
                 testStencil.innerHTML = `
-                    <div class="gallery-image-container">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjhGOUZBIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNDAiIHN0cm9rZT0iI0REMjYyNiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiPk1hcnR5ciBTdGVuY2lsPC90ZXh0Pgo8L3N2Zz4K" alt="Test Stencil" class="gallery-image">
+                    <div class="gallery-image-container" style="display: block; visibility: visible;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjhGOUZBIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNDAiIHN0cm9rZT0iI0REMjYyNiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiPk1hcnR5ciBTdGVuY2lsPC90ZXh0Pgo8L3N2Zz4K" alt="Test Stencil" class="gallery-image" style="display: block; visibility: visible; opacity: 1; width: 100%; height: auto;">
                         <div class="image-overlay">
                             <div class="overlay-content">
                                 <h3>${martyr} - Artwork</h3>
@@ -161,9 +165,20 @@
                 `;
                 
                 stencilsGrid.appendChild(testStencil);
+                
+                // Add click event to test visibility
+                testStencil.addEventListener('click', function() {
+                    console.log('Stencil clicked:', martyr);
+                    alert(`${martyr} stencil is working!`);
+                });
             });
             
             console.log('Test stencils added successfully');
+            console.log('Total children in grid:', stencilsGrid.children.length);
+            console.log('Grid computed style:', window.getComputedStyle(stencilsGrid));
+            
+            // Force a reflow
+            stencilsGrid.offsetHeight;
         }
     </script>
 </body>
